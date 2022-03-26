@@ -1,0 +1,60 @@
+.carousel {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.carousel .slide {
+    background: transparent;
+}
+
+.carousel .slide img {
+    border-radius: 30px;
+}
+
+.carousel .slide .legendReview {
+
+}
+.itemWork {
+    position: relative;
+}
+.carousel .deskOffer{
+    width: 30%;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 161.52%;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+.carousel .linkOffer{
+    width: 230px;
+    height: 53px;
+    background: #F8F8F8;
+    border: 2px solid #F8F8F8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.carousel .linkOffer p{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: linear-gradient(139.87deg, #61CEF8 7.04%, #A53EF6 113.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.carousel .titleOffer {
+    width: 60%;
+    margin: 0;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+}
+
+.carousel.carousel-slider .control-arrow:hover {
+    background: transparent;
+}

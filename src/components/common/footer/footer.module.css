@@ -1,0 +1,45 @@
+.footerWrap{
+    background: #fff;
+    height: 113px;
+    align-items: center;
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+}
+.logo{
+    width: 180px;
+    margin-right: 100px;
+}
+.logo img{
+    width: 100%;
+}
+.nav{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+.nav a{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #0E153A;
+    text-decoration: none;
+}
+.right{
+
+}
+.footerBottomWrap{
+    border-top:1px solid #E7E7E7;
+    text-align: center;
+    padding: 30px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+.footerBottomWrap p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #5C5E6D;
+}

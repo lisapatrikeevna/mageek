@@ -1,0 +1,47 @@
+.helpsCardsItem{
+    background: #FFFFFF;
+    border: 1px solid #E1E1E1;
+    box-sizing: border-box;
+    border-radius: 20px;
+    /*width: 530px;*/
+    width: 31%;
+    text-align: left;
+    margin: 10px;
+}
+.helpsCardsItemInner{
+    padding: 40px;
+}
+.helpsCardsItem h3{
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    color: #0E153A;
+    margin: 0 0 16px 0;
+}
+.helpsCardsItemInner p{
+    margin: 0;
+}
+.icon{
+    margin-bottom: 20px;
+}
+.link{
+    height: 60px;
+    justify-content: flex-end;
+    color: #FFFFFF;
+    border-radius: 0px 0px 20px 20px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+.arrow{
+    width: 52px;
+    margin-right: 37px;
+    margin-left: 18px;
+}
+.linkPath{
+
+}

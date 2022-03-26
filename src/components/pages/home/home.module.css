@@ -1,0 +1,154 @@
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.helpCardsWrap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 70px -10px 0 -10px;
+}
+.title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #8370FF;
+
+}
+.helpsBlock .title{
+    margin: 0 0 16px 0;
+}
+.helpsBlock h2,.textBlockLastW h2,.reviewsBlock h2,.clientBlock h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A;
+}
+.lastWorks{
+    margin-top: 150px;
+    text-align: right;
+}
+.cardWrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.textBlockLastW{
+    width: 592px;
+    text-align: center;
+    margin: 0 auto 70px;
+}
+.worksLink {
+    margin-top: 43px;
+   font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.worksLink span{
+    margin-left: 18px;
+    width: 52px;
+}
+.reviewsBlock{
+    margin-top: 150px;
+    background: #F8F8F8;
+}
+.clientImg{
+    width: 300px;
+    /*height: 144px;*/
+    padding: 45px 0;
+    margin-bottom: 50px;
+}
+.clientArr{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.letsDiscuss{
+    background: #0E153A;
+    color: #FFFFFF;
+    margin-top: 195px;
+}
+.letsDiscuss .container{
+    display: flex;
+}
+.leftBlockDiscuss{
+    width: 45%;
+    text-align: left;
+    margin-top: 147px;
+    margin-bottom: 148px;
+}
+.leftBlockDiscuss h5{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.leftBlockDiscuss h3{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    width: 520px;
+    margin-top: 16px;
+    margin-bottom: 0;
+
+}
+.leftBlockDiscussDesk{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 165.5%;
+    margin-bottom: 10px;
+}
+.leftBlockDiscussLinkT{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+}
+.leftBlockLinkBtn{
+    margin: 40px 0;
+    width: 230px;
+    height: 53px;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+.rightBlockDiscuss{
+    width: 55%;
+    text-align: left;
+    position: relative;
+}
+.rightBlockDiscussText{
+    width: 527px;
+    margin-top: 129px;
+    margin-bottom: 145px;
+}
+.rightBlockDiscuss h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+.mIconWrap{
+    position: absolute;
+    /*width: 679px;*/
+    width: 72%;
+    top: 52px;
+    bottom: 76px;
+}
+.mIconWrap img{
+    width: 100%;
+}
+.rightBlockDiscussText{
+    margin-left: auto;
+}
