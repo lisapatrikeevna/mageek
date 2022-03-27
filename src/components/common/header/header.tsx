@@ -11,10 +11,11 @@ const Header = () => {
             </div>
             <div className={cl.nav}>
                 <Link to='/'>home</Link>
-                <Link to='/services'>services</Link>
-                <Link to='/works'>works</Link>
-                <Link to='/about'>about</Link>
-                <Link to='/contacts'>contacts</Link>
+                <Link to='/services'>Услуги</Link>
+                <Link to='/works'>Портфолио</Link>
+                <Link to='/'>Экспертиза</Link>
+                <Link to='/about'>О нас</Link>
+                <Link to='/contacts'>Контакты</Link>
             </div>
             <div className={cl.right}>
 

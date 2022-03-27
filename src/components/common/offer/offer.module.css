@@ -1,0 +1,60 @@
+
+.offer {
+    position: relative;
+}
+
+.offerBg img {
+    width: 100%;
+}
+
+.offer h3 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97px;
+    color: #F8F8F8;
+    margin: 0;
+    width: 52%;
+}
+
+.desk {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 161.52%;
+    color: #F8F8F8;
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.link {
+    width: 230px;
+    height: 53px;
+    background: #F8F8F8;
+    border: 2px solid #F8F8F8;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: linear-gradient(139.87deg, #61CEF8 7.04%, #A53EF6 113.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
+}
+
+.offerText {
+    top: 20%;
+    bottom:0;
+    margin-left: 139px;
+    position: absolute;
+    text-align: left;
+}

@@ -1,0 +1,48 @@
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.filteredBlock{
+    display: flex;
+    width: 80%;
+    padding: 0;
+    margin: 80px auto 57px;
+    justify-content: space-between;
+}
+.filterI{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #0E153A;
+    padding-bottom: 7px;
+    list-style: none;
+    border-bottom: 2px solid transparent;
+}
+.filterI.active{
+    color: #8370FF;
+    border-bottom-color: #8370FF;
+}
+.cardWrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.worksMore{
+    width: 230px;
+    height: 53px;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 8px;
+    margin: 50px auto 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

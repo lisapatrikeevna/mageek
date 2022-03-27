@@ -2,6 +2,10 @@ import React from 'react';
 import cl from './footer.module.css'
 import logo from './../../../assets/Logo.png'
 import {Link} from 'react-router-dom';
+import inst from './../../../assets/instagram.png'
+import tg from './../../../assets/tg.png'
+import linked from './../../../assets/Linkedin.png'
+
 
 const Footer = () => {
     return (
@@ -18,7 +22,9 @@ const Footer = () => {
                 <Link to='/contacts'>contacts</Link>
             </div>
             <div className={cl.right}>
-
+                <img src={inst} alt="inst"/>
+                <img src={tg} alt="tg"/>
+                <img src={linked} alt="linked"/>
             </div>
         </div>
             <div className={cl.footerBottomWrap}>
