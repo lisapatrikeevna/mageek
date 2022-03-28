@@ -1,0 +1,115 @@
+.ourServices {
+    display: flex;
+    margin-top: 120px;
+}
+
+.textBlock {
+    width: 50%;
+    text-align: left;
+    margin-right: 7%;
+}
+
+.titleMain {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #8370FF;
+
+}
+
+.textAfter {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 168.52%;
+    color: #0E153A;
+    margin-top: 30px;
+    margin-bottom: 23px;
+}
+
+.imageList {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.name{
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    letter-spacing: -0.02em;
+    /*color: #8370FF;*/
+}
+
+/*WebAccordionBlock style*/
+.webAccordionWrap {
+    display: flex;
+    text-align: left;
+    border-top: 1px solid #E8E8E8;
+    padding: 0 6%;
+}
+.moreBtn{
+    background: transparent;
+    width: 150px;
+    border: 1px solid #8abbf9;
+    height: 40px;
+    border-radius: 5px;
+}
+.moreBtn span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: linear-gradient(139.87deg, #61CEF8 7.04%, #A53EF6 113.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.webLeft {
+    width: 50%;
+    padding-right: 5%;
+}
+.webRight {
+    width: 50%;
+}
+.item {
+    display: flex;
+    align-items: center;
+}
+
+.item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 162.02%;
+    color: #0E153A;
+    text-decoration: none;
+}
+
+.item span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 162.02%;
+    color: #BCBCBC;
+    margin: 0 16px;
+}
+.imageBlock{
+    width: 50%;
+}
+.imageBlock img{
+    width: 100%;
+}
+.accordionBlock{
+    margin-top: 200px;
+}

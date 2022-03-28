@@ -1,4 +1,3 @@
-
 .offer {
     position: relative;
 }
@@ -13,7 +12,7 @@
     line-height: 97px;
     color: #F8F8F8;
     margin: 0;
-    width: 52%;
+
 }
 
 .desk {
@@ -23,6 +22,7 @@
     color: #F8F8F8;
     margin-top: 10px;
     margin-bottom: 35px;
+    width: 80%;
 }
 
 .link {
@@ -52,9 +52,52 @@
 }
 
 .offerText {
-    top: 20%;
-    bottom:0;
+    /*top: 20%;*/
+    /*bottom:0;*/
     margin-left: 139px;
     position: absolute;
     text-align: left;
+    width: 52%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*height: 30vh;*/
+    height: -webkit-fill-available;
+}
+
+@media screen and (max-width: 1600px) {
+    .offer h3 {
+        font-size: 65px;
+        line-height: 75px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .offer h3 {
+        font-size: 53px;
+        line-height: 65px;
+    }
+}
+@media screen and (max-width: 993px) {
+    .offer h3 {
+        font-size: 40px;
+        line-height: 55px;
+    }
+    .desk{
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 27px;
+    }
+    .link{
+        width: 200px;
+        height: 48px;
+    }
+    .offerBg img{
+        display: none;
+    }
+    .offerText{
+        position: relative;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        margin-left: 5%;
+    }
 }

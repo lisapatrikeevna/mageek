@@ -1,24 +1,29 @@
-.headerWrap{
+.headerWrap {
     background: #fff;
     height: 113px;
     align-items: center;
     display: flex;
     width: 90%;
     margin: 0 auto;
+    justify-content: space-between;
 }
-.logo{
+
+.logo {
     width: 180px;
     margin-right: 100px;
 }
-.logo img{
+
+.logo img {
     width: 100%;
 }
-.nav{
+
+.nav {
     width: 45%;
     display: flex;
     justify-content: space-between;
 }
-.nav a{
+
+.nav a {
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
@@ -26,6 +31,53 @@
     color: #0E153A;
     text-decoration: none;
 }
-.right{
+
+.active {
+    color: red;
+}
+
+.right {
+    display: flex;
+}
+
+.contactBtn {
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 8px;
+    width: 230px;
+    height: 53px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+}
+
+.menuBtn {
+
+}
+
+
+@media screen and (max-width: 993px) {
+    .menuBtn {
+        position: relative;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        position: absolute;
+        width: 300px;
+        background: #fff;
+        border-radius: 10px;
+        margin-top: 205px;
+        border: 2px solid #72abfa;
+        z-index: 999;
+        padding: 20px 20px 30px;
+        text-align: left;
+        left: 50%;
+        margin-left: -150px;
+    }
 
 }
