@@ -40,7 +40,8 @@
     display: flex;
     justify-content: space-between;
 }
-.name{
+
+.name {
     font-weight: 700;
     font-size: 50px;
     line-height: 61px;
@@ -55,14 +56,16 @@
     border-top: 1px solid #E8E8E8;
     padding: 0 6%;
 }
-.moreBtn{
+
+.moreBtn {
     background: transparent;
     width: 150px;
     border: 1px solid #8abbf9;
     height: 40px;
     border-radius: 5px;
 }
-.moreBtn span{
+
+.moreBtn span {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -73,13 +76,16 @@
     background-clip: text;
     text-fill-color: transparent;
 }
+
 .webLeft {
     width: 50%;
     padding-right: 5%;
 }
+
 .webRight {
     width: 50%;
 }
+
 .item {
     display: flex;
     align-items: center;
@@ -104,12 +110,97 @@
     color: #BCBCBC;
     margin: 0 16px;
 }
-.imageBlock{
+
+.imageBlock {
     width: 50%;
 }
-.imageBlock img{
+
+.imageBlock img {
     width: 100%;
 }
-.accordionBlock{
+
+.accordionBlock {
     margin-top: 200px;
+}
+
+.blueBlock {
+    /*height: 399px;*/
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    box-shadow: 0px 17px 59px rgba(0, 116, 225, 0.31);
+    border-radius: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 6%;
+    margin-top: 150px;
+}
+.blueDeck{
+    text-align: left;
+    width: 60%;
+}
+.blueDeck h6{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin: 60px 0 0;
+}
+.blueDeck h4{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 136.02%;
+    margin: 20px 0 50px;
+    letter-spacing: -0.02em;
+}
+.linkBtn{
+    width: 250px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+}
+.linkBtn span{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: linear-gradient(139.87deg, #61CEF8 7.04%, #A53EF6 113.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.textAfterBtn{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: #FEFEFF;
+}
+.arrowForLink{
+    margin-top: -60px;
+}
+
+
+@media screen and (max-width: 993px) {
+    .ourServices, .webAccordionWrap {
+        flex-direction: column;
+    }
+
+    .textBlock, .imageBlock {
+        width: 100%;
+    }
+
+    .imageBlock {
+        margin-top: 60px;
+    }
+
+    .webLeft, .webRight {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .item span {
+        margin: 0 16px 0 0;
+    }
 }

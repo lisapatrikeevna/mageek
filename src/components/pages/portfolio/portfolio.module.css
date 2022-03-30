@@ -4,14 +4,15 @@
     margin: 0 auto;
 }
 
-.filteredBlock{
+.filteredBlock {
     display: flex;
     width: 80%;
     padding: 0;
     margin: 80px auto 57px;
     justify-content: space-between;
 }
-.filterI{
+
+.filterI {
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
@@ -21,16 +22,19 @@
     list-style: none;
     border-bottom: 2px solid transparent;
 }
-.filterI.active{
+
+.filterI.active {
     color: #8370FF;
     border-bottom-color: #8370FF;
 }
-.cardWrap{
+
+.cardWrap {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.worksMore{
+
+.worksMore {
     width: 230px;
     height: 53px;
     background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
@@ -45,4 +49,16 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+}
+
+@media screen and (max-width: 1222px) {
+    .filteredBlock {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1993px) {
+    .filteredBlock {
+        width: 100%;
+    }
 }

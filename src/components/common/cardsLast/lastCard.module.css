@@ -37,3 +37,10 @@
 .bg img {
     width: 100%;
 }
+@media screen and (max-width: 1222px) {
+    .lastCardsItem{
+        width: 70%;
+        margin: 20px auto;
+    }
+
+}

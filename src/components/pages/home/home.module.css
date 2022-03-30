@@ -151,3 +151,22 @@
 .rightBlockDiscussText{
     margin-left: auto;
 }
+@media screen and (max-width: 1222px){
+    .leftBlockDiscuss h3,.rightBlockDiscussText{
+        width: auto;
+    }
+}
+@media screen and (max-width: 993px){
+   .letsDiscuss .container{
+       flex-direction: column;
+   }
+    .leftBlockDiscuss,.rightBlockDiscussText,.rightBlockDiscuss{
+        width: 100%;
+    }
+    .leftBlockDiscuss{
+        margin-bottom: 0;
+    }
+    .rightBlockDiscussText{
+        margin-bottom: 200px;
+    }
+}

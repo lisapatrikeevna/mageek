@@ -168,7 +168,6 @@ const Home = () => {
         <>
             <div className={cl.container}>
                 <CarouselComponent banner={listBanners}/>
-
                 <div className={cl.helpsBlock}>
                     <p className={cl.title}>Наши услуги</p>
                     <h2>КАК мы можем вам помочь</h2>
@@ -178,26 +177,7 @@ const Home = () => {
                         })}
                     </div>
                 </div>
-                <div className={cl.lastWorks}>
-                    <div className={cl.textBlockLastW}>
-                        <p className={cl.title}>2000+ УСПЕШНЫХ ПРОЕКТОВ В IT</p>
-                        <h2>Последние проекты</h2>
-                        <p className={cl.lastWorksDesk}>
-                            За 21 год мы приобрели крутой опыт и лучше остальных знаем,
-                            на чем фокусироваться, как не допустить фатальных ошибок и как
-                            определить маршрут и инструменты для движения вперед
-                        </p>
-                    </div>
-                    <div className={cl.cardWrap}>
-                        {lastCards.map(i => {
-                            return <LastCard key={i.id} cardItem={i}/>
-                        })}
-                    </div>
-                    <Link to='/works' className={cl.worksLink}>
-                        Все проекты
-                        <span><img src={arrowBl} alt="arrowBl"/></span>
-                    </Link>
-                </div>
+                <LastWorksSection/>
             </div>
             <div className={cl.reviewsBlock}>
                 <div className={cl.container}>
@@ -218,43 +198,66 @@ const Home = () => {
 
 export default Home;
 
-
+export const LastWorksSection = () => {
+    return (
+        <div className={cl.lastWorks}>
+            <div className={cl.textBlockLastW}>
+                <p className={cl.title}>2000+ УСПЕШНЫХ ПРОЕКТОВ В IT</p>
+                <h2>Последние проекты</h2>
+                <p className={cl.lastWorksDesk}>
+                    За 21 год мы приобрели крутой опыт и лучше остальных знаем,
+                    на чем фокусироваться, как не допустить фатальных ошибок и как
+                    определить маршрут и инструменты для движения вперед
+                </p>
+            </div>
+            <div className={cl.cardWrap}>
+                {lastCards.map(i => {
+                    return <LastCard key={i.id} cardItem={i}/>
+                })}
+            </div>
+            <Link to='/works' className={cl.worksLink}>
+                Все проекты
+                <span><img src={arrowBl} alt="arrowBl"/></span>
+            </Link>
+        </div>
+    )
+}
 export const BottomBlock = () => {
-  return(
-      <div className={cl.letsDiscuss}>
-          <div className={cl.container}>
-              <div className={cl.leftBlockDiscuss}>
-                  <h5>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h5>
-                  <h3>ДАВАЙТЕ обсудим ВАШ БИЗНЕС!</h3>
-                  <button className={cl.leftBlockLinkBtn}>Связаться с нами</button>
-                  <p className={cl.leftBlockDiscussDesk}>Звоните, пишите,
-                      пообщаемся, договоримся!</p>
-                  <p className={cl.leftBlockDiscussLinkT}>office+2536076@wezom.com.ua</p>
-              </div>
-              <div className={cl.rightBlockDiscuss}>
-                  <div className={cl.mIconWrap}>
-                      <img src={mIcon} alt="mIcon"/>
-                  </div>
-                  <div className={cl.rightBlockDiscussText}>
-                      <h3>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h3>
-                      <p>
-                          Мы верим, что только благодаря вовлеченности и
-                          совместной работе над проектом можно достичь больших
-                          целей и получить крутые результаты, поэтому под каждый
-                          проект формируем Dream Team. В процессе работы мы с
-                          головой погружаемся в бизнес клиента, ищем и принимаем
-                          только те решения, которые релевантны задачам и бизнес-целям.
+    return (
+        <div className={cl.letsDiscuss}>
+            <div className={cl.container}>
+                <div className={cl.leftBlockDiscuss}>
+                    <h5>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h5>
+                    <h3>ДАВАЙТЕ обсудим ВАШ БИЗНЕС!</h3>
+                    <button className={cl.leftBlockLinkBtn}>Связаться с нами</button>
+                    <p className={cl.leftBlockDiscussDesk}>Звоните, пишите,
+                        пообщаемся, договоримся!</p>
+                    <p className={cl.leftBlockDiscussLinkT}>office+2536076@wezom.com.ua</p>
+                </div>
+                <div className={cl.rightBlockDiscuss}>
+                    <div className={cl.mIconWrap}>
+                        <img src={mIcon} alt="mIcon"/>
+                    </div>
+                    <div className={cl.rightBlockDiscussText}>
+                        <h3>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h3>
+                        <p>
+                            Мы верим, что только благодаря вовлеченности и
+                            совместной работе над проектом можно достичь больших
+                            целей и получить крутые результаты, поэтому под каждый
+                            проект формируем Dream Team. В процессе работы мы с
+                            головой погружаемся в бизнес клиента, ищем и принимаем
+                            только те решения, которые релевантны задачам и бизнес-целям.
 
-                          За 2021 год мы приобрели крутой опыт и лучше остальных знаем,
-                          на чем фокусироваться, чтобы выполнить проект в срок и
-                          сэкономить бюджет клиента. Знаем, как не допустить фатальных
-                          ошибок при создании сложных IT-решений. Каждый раз, перед
-                          началом проекта, делаем аудит, чтобы определить маршрут и
-                          инструменты для движения вперед.
-                      </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  )
+                            За 2021 год мы приобрели крутой опыт и лучше остальных знаем,
+                            на чем фокусироваться, чтобы выполнить проект в срок и
+                            сэкономить бюджет клиента. Знаем, как не допустить фатальных
+                            ошибок при создании сложных IT-решений. Каждый раз, перед
+                            началом проекта, делаем аудит, чтобы определить маршрут и
+                            инструменты для движения вперед.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
