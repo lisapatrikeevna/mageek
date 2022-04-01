@@ -1,0 +1,113 @@
+.textBlockWrap {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.mapsSection {
+    margin: 150px 0 80px;
+}
+.textBlock {
+    width: 50%;
+}
+
+.textBlock h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A;
+    margin: 16px 0px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #8370FF;
+    margin: 16px 0px;
+}
+
+.desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #5C5E6D;
+    margin-bottom: 80px;
+}
+
+.contactBtn {
+    width: 230px;
+    height: 53px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #8abbf9;
+    background: transparent;
+
+}
+
+.contactBtn p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin: 0;
+}
+
+.mapWrap img {
+    width: 100%;
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.info h4{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 162.02%;
+    color: #0E153A;
+    margin: 10px 0px;
+}
+.phones a,.mails a,.adres p,.ask a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #5C5E6D;
+    margin-top: 10px;
+}
+.phones,.mails,.adres,.ask{
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+}
+.titleWrap h3{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A!important;
+    margin-bottom: 80px;
+    margin-top: 12px;
+}
+.titleWrap p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #8370FF;
+}
+.infoWrap{
+    text-align: left;
+}

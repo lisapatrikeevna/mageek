@@ -14,6 +14,7 @@ import arrowBl from "./../../../assets/arrowBl.png";
 import clientImg from "./../../../assets/clientImg.png";
 import mIcon from "./../../../assets/mIcon.png";
 import ReviewsCarousel from "../../common/reviewsCarousel/reviewsCarousel";
+import {reviewsArr} from "../about/about";
 
 export type helpCardItemType = {
     id: string
@@ -36,21 +37,21 @@ export const listBanners = [
         title: 'Разработка IT и Digital решений с гарантией!',
         desk: 'Cтроим IT-экосистемы и помогаем, трансформировать B2B, B2C, D2C продажи',
         btnText: 'обсудить проект',
-        btnLink: 'services'
+        btnLink: '/services'
     },
     {
         img: offer,
         title: 'решений с гарантией!',
         desk: 'Cтроим IT-экосистемы  B2C, D2C продажи',
         btnText: 'обсудить проект',
-        btnLink: 'services'
+        btnLink: '/web'
     },
     {
         img: offer,
         title: 'Разработка IT и Digital',
         desk: 'помогаем трансформировать B2B, B2C, D2C продажи',
         btnText: 'обсудить проект',
-        btnLink: 'services'
+        btnLink: '/about'
     },
 
 ]
@@ -179,11 +180,7 @@ const Home = () => {
                 </div>
                 <LastWorksSection/>
             </div>
-            <div className={cl.reviewsBlock}>
-                <div className={cl.container}>
-                    {/*<ReviewsCarousel banner={listBanners}/>*/}
-                </div>
-            </div>
+            <ReviewsCarousel banner={reviewsArr} marginTop={'150px'} marginBottom={'150px'}/>
             <div className={cl.clientBlock}>
                 <div className={cl.container}>
                     <p className={cl.title}>СЧАСТЛИВЫЕ КЛИЕНТЫ</p>
@@ -230,7 +227,7 @@ export const BottomBlock = () => {
                     <h5>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h5>
                     <h3>ДАВАЙТЕ обсудим ВАШ БИЗНЕС!</h3>
                     <button className={cl.leftBlockLinkBtn}>Связаться с нами</button>
-                    <p className={cl.leftBlockDiscussDesk}>Звоните, пишите,
+                    <p className={cl.leftBlockDiscussDesk}>Звоните, пишите,<br/>
                         пообщаемся, договоримся!</p>
                     <p className={cl.leftBlockDiscussLinkT}>office+2536076@wezom.com.ua</p>
                 </div>
@@ -247,7 +244,8 @@ export const BottomBlock = () => {
                             проект формируем Dream Team. В процессе работы мы с
                             головой погружаемся в бизнес клиента, ищем и принимаем
                             только те решения, которые релевантны задачам и бизнес-целям.
-
+                        </p>
+                        <p style={{marginTop: '15px'}}>
                             За 2021 год мы приобрели крутой опыт и лучше остальных знаем,
                             на чем фокусироваться, чтобы выполнить проект в срок и
                             сэкономить бюджет клиента. Знаем, как не допустить фатальных

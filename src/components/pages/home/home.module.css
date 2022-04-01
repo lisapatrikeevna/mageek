@@ -2,6 +2,9 @@
     width: 90%;
     margin: 0 auto;
 }
+.helpsBlock{
+    margin-top: 150px;
+}
 .helpCardsWrap{
     display: flex;
     flex-wrap: wrap;
@@ -14,17 +17,15 @@
     line-height: 19px;
     text-transform: uppercase;
     color: #8370FF;
-
-}
-.helpsBlock .title{
     margin: 0 0 16px 0;
 }
-.helpsBlock h2,.textBlockLastW h2,.reviewsBlock h2,.clientBlock h2{
+.helpsBlock h2,.textBlockLastW h2,.clientBlock h2{
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
     color: #0E153A;
+    margin-bottom: 30px;
 }
 .lastWorks{
     margin-top: 150px;
@@ -41,7 +42,7 @@
     margin: 0 auto 70px;
 }
 .worksLink {
-    margin-top: 43px;
+    margin-top: 38px;
    font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -49,6 +50,7 @@
     background: -webkit-linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: block;
 }
 .worksLink span{
     margin-left: 18px;
@@ -63,6 +65,10 @@
     padding: 45px 0;
     margin-bottom: 50px;
 }
+.clientImg img{
+    width: 100%;
+    padding: 2%;
+}
 .clientArr{
     display: flex;
     flex-wrap: wrap;
@@ -70,11 +76,14 @@
 }
 .letsDiscuss{
     background: #0E153A;
-    color: #FFFFFF;
     margin-top: 195px;
+}
+.letsDiscuss h3,.letsDiscuss h5{
+    color: #FFFFFF!important;
 }
 .letsDiscuss .container{
     display: flex;
+    color: #FFFFFF!important;
 }
 .leftBlockDiscuss{
     width: 45%;
@@ -97,7 +106,6 @@
     width: 520px;
     margin-top: 16px;
     margin-bottom: 0;
-
 }
 .leftBlockDiscussDesk{
     font-weight: 300;
@@ -137,6 +145,7 @@
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
+    margin-bottom: 9px;
 }
 .mIconWrap{
     position: absolute;
@@ -153,7 +162,10 @@
 }
 @media screen and (max-width: 1222px){
     .leftBlockDiscuss h3,.rightBlockDiscussText{
-        width: auto;
+        width: 62%;
+    }
+    .letsDiscuss{
+        margin-top: 100px;
     }
 }
 @media screen and (max-width: 993px){
@@ -168,5 +180,45 @@
     }
     .rightBlockDiscussText{
         margin-bottom: 200px;
+        margin-top: 215px;
+    }
+    .textBlockLastW{
+        width: 95%;
+        margin: 70px auto 40px;
+    }
+    .helpsBlock,.lastWorks{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 768px){
+    .rightBlockDiscussText{
+        margin-top: 100px;
+    }
+    .clientImg{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 578px){
+    .leftBlockDiscuss h3{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .rightBlockDiscussText{
+        margin-bottom: 90px;
+    }
+    .helpsBlock,.lastWorks{
+        margin-top: 60px;
+    }
+    .textBlockLastW h2{
+        font-size: 23px;
+        line-height: 25px;
+    }
+    .title{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .helpsBlock h2{
+        font-size: 28px;
+        line-height: 30px;
     }
 }

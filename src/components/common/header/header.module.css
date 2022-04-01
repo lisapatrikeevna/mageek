@@ -32,15 +32,11 @@
     text-decoration: none;
 }
 
-.active {
-    color: red;
-}
-
 .right {
     display: flex;
 }
 
-.contactBtn {
+.contactBtn{
     background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
     border-radius: 8px;
     width: 230px;
@@ -58,6 +54,16 @@
 }
 
 
+@media screen and (max-width: 1200px) {
+    .logo{
+        margin-right: 50px;
+    }
+    .contactBtn{
+        width: 170px;
+        font-size: 13px;
+        height: 47px;
+    }
+}
 @media screen and (max-width: 993px) {
     .menuBtn {
         position: relative;
@@ -65,7 +71,7 @@
         margin-right: 20px;
     }
 
-    .nav {
+    .nav{
         flex-direction: column;
         position: absolute;
         width: 300px;

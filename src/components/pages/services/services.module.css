@@ -15,6 +15,7 @@
     line-height: 48px;
     text-transform: uppercase;
     color: #0E153A;
+    margin: 16px 0 30px;
 }
 
 .title {
@@ -54,7 +55,7 @@
     display: flex;
     text-align: left;
     border-top: 1px solid #E8E8E8;
-    padding: 0 6%;
+    padding: 3% 6% 1%;
 }
 
 .moreBtn {
@@ -63,6 +64,7 @@
     border: 1px solid #8abbf9;
     height: 40px;
     border-radius: 5px;
+    margin-top: 25px;
 }
 
 .moreBtn span {
@@ -135,32 +137,39 @@
     padding: 3% 6%;
     margin-top: 150px;
 }
-.blueDeck{
+
+.blueDeck {
     text-align: left;
     width: 60%;
 }
-.blueDeck h6{
+
+.blueDeck h6 {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
     margin: 60px 0 0;
+    color: #FFFFFF !important;
 }
-.blueDeck h4{
+
+.blueDeck h4 {
     font-weight: 700;
     font-size: 60px;
     line-height: 136.02%;
     margin: 20px 0 50px;
     letter-spacing: -0.02em;
+    color: #FFFFFF !important;
 }
-.linkBtn{
+
+.linkBtn {
     width: 250px;
     height: 60px;
     background: #FFFFFF;
     border-radius: 8px;
     border: none;
 }
-.linkBtn span{
+
+.linkBtn span {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
@@ -171,18 +180,29 @@
     background-clip: text;
     text-fill-color: transparent;
 }
-.textAfterBtn{
+
+.textAfterBtn {
     font-weight: 400;
     font-size: 16px;
     line-height: 27px;
-    color: #FEFEFF;
+    color: #FEFEFF !important;
 }
-.arrowForLink{
-    margin-top: -60px;
+
+.arrowForLink {
+    margin-top: -38px;
 }
 
 
 @media screen and (max-width: 993px) {
+    .blueBlock {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .blueDeck {
+        width: 100%;
+    }
+
     .ourServices, .webAccordionWrap {
         flex-direction: column;
     }
@@ -195,6 +215,10 @@
         margin-top: 60px;
     }
 
+    .accordionBlock {
+        margin-top: 100px;
+    }
+
     .webLeft, .webRight {
         width: 90%;
         padding: 5%;
@@ -202,5 +226,57 @@
 
     .item span {
         margin: 0 16px 0 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .blueDeck h4 {
+        font-size: 46px;
+        margin-bottom: 65px;
+    }
+
+    .titleMain {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .name {
+        font-size: 28px;
+        line-height: 30px;
+    }
+
+    .item a {
+        font-size: 15px;
+    }
+
+    .blueBlock, .accordionBlock {
+        margin: 50px 0 !important;
+    }
+
+    .titleMain {
+        font-size: 21px;
+        line-height: 25px;
+        margin: 8px 0 20px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
+
+    .blueDeck h4 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .blueDeck h6 ,.linkBtn span{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .linkBtn{
+        width: 200px;
+        height: 40px;
+        margin: 15px 0;
     }
 }

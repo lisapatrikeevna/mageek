@@ -1,0 +1,39 @@
+.infoListBlockWrap {
+    margin-top: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapItem {
+    width: 250px;
+    text-align: left;
+}
+.bottomTitleItem {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #F8F8F8;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.deskItem {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #5C5E6D;
+    margin-bottom: 15px;
+}
+.infoListBlockWrap h6{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 162.02%;
+    color: #0E153A;
+    margin-bottom: 8px;
+}

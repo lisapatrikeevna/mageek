@@ -8,6 +8,7 @@ import Footer from "./components/common/footer/footer";
 import Portfolio from "./components/pages/portfolio/portfolio";
 import Contact from "./components/pages/contact/contact";
 import About from "./components/pages/about/about";
+import Web from "./components/pages/web/web";
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
             <Route path='/works' element={<Portfolio/>}/>
             <Route path='/contacts' element={<Contact/>}/>
             <Route path='/about' element={<About/>}/>
-            {/*<Route path='/works' element={<Portfolio/>}/>*/}
+            <Route path='/web' element={<Web/>}/>
         </Routes>
         <Footer/>
     </div>

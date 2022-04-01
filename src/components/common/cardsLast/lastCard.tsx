@@ -12,6 +12,7 @@ const LastCard = ({cardItem}: propsType) => {
             <span className={cl.bg}> <img src={cardItem.img} alt="img"/></span>
             <div className={cl.lastsCardsItemInner}>
                 {/*{cardItem.icon? <span>{cardItem.icon}</span> : ''}*/}
+                <h6>{cardItem.text}</h6>
                 <h3>{cardItem.title}</h3>
                 <p>{cardItem.desc}</p>
             </div>

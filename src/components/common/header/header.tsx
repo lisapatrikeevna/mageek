@@ -73,9 +73,9 @@ const Header = () => {
 
     return (
         <div className={cl.headerWrap}>
-            <div className={cl.logo}>
+            <NavLink to='/' className={cl.logo}>
                 <img src={logo} alt="logo"/>
-            </div>
+            </NavLink>
             {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/> }
             <div className={cl.nav}  style={onStyle}>
                 <NavLink to='/' >home</NavLink>

@@ -101,3 +101,19 @@
         margin-left: 5%;
     }
 }
+@media screen and (max-width: 576px) {
+    .offerText{
+        width: 90%;
+    }
+    .offerText h3{
+        font-size: 30px;
+        line-height: 32px;
+    }
+    .link p{
+        font-size: 14px;
+    }
+    .link{
+        width: 180px;
+        height: 40px;
+    }
+}

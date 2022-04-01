@@ -20,7 +20,7 @@
 }
 
 .carousel .slide .legend {
-    padding: 0;
+    padding: 10% 0 0 10%;
     width: inherit;
     height: inherit;
     position: absolute;
@@ -32,8 +32,7 @@
     border-radius: 30px;
     background: linear-gradient(150.47deg, rgba(74, 79, 190, 0.82) -29.27%, rgba(129, 134, 247, 0.87) 95.72%, #9281FF 95.72%);
     text-align: left;
-    padding-left: 10%;
-    padding-top: 10%;
+    opacity: 0.7;
 }
 .itemWork {
     position: relative;
@@ -67,6 +66,7 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-fill-color: transparent;
+    margin-bottom: 0;
 }
 .carousel .titleOffer {
     width: 60%;
@@ -74,8 +74,69 @@
     font-weight: 700;
     font-size: 80px;
     line-height: 97px;
+    color: #FFFFFF!important;
 }
 
 .carousel.carousel-slider .control-arrow:hover {
     background: transparent;
+}
+
+@media screen and (max-width: 1400px) {
+    .carousel .titleOffer{
+        font-size: 65px;
+        width: 90%;
+        line-height: 76px;
+    }
+    .carousel .deskOffer{
+        width: 60%;
+        line-height: 24px;
+    }
+}
+@media screen and (max-width: 993px) {
+    .carousel .titleOffer{
+        font-size: 45px;
+        line-height: 47px;
+    }
+    .carousel .slide .legend {
+        padding: 6% 0 0 6%;
+    }
+    .carousel .thumbs{
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 796px) {
+    .carousel .titleOffer{
+        font-size: 36px;
+        line-height: 38px;
+    }
+    .carousel .deskOffer{
+        line-height: 19px;
+        font-size: 15px;
+        margin-bottom: 20px;
+    }
+    .carousel .linkOffer {
+        width: 140px;
+        height: 39px;
+
+    }
+    .carousel .linkOffer p{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 576px) {
+    .carousel .titleOffer{
+        font-size: 16px;
+        line-height: 18px;
+    }
+    .carousel .deskOffer{
+        display: none;
+    }
+    .carousel .linkOffer {
+        width: 124px;
+        height: 30px;
+        margin-top: 20px;
+    }
+    .carousel .linkOffer p{
+        font-size: 10px;
+    }
 }

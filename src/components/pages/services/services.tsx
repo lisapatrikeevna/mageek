@@ -8,14 +8,13 @@ import {Accordion, AccordionDetails, AccordionSummary} from "@mui/material";
 import arrow from './../../../assets/acordionArrow.png'
 import arrowBtn from './../../../assets/arrowBl.png'
 import arrowForLink from './../../../assets/arrow.png'
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import webImg from './../../../assets/images/web.png'
 import {BottomBlock, LastWorksSection} from "../home/home";
 
 const Services = () => {
     return (
         <div className={style.container}>
-            {/*services*/}
             <Offer img={imgBg} title={'Создаем IT & Digital решения с гарантией!'} linkPath={'/path'}/>
            <DeckWithImgSection title={'Наши услуги'} titleMain={'Разработка под ключ'}
                                desk={'Мы создаем инструменты для диджитализации и масштабирования бизнеса,\n' +
@@ -65,27 +64,15 @@ const Services = () => {
                     </AccordionSummary>
                 </Accordion>
             </div>
-            <div className={cl.blueBlock}>
-                <div className={cl.blueDeck}>
-                    <h6>Готовы начать ваш проект</h6>
-                    <h4>Более 2000+ довольных клиентов за 20+ лет работы</h4>
-                </div>
-                <div className={cl.arrowForLink}><img src={arrowForLink} alt=""/></div>
-                <div className={cl.linkBtnWrap}>
-                    <button className={cl.linkBtn}>
-                        <span>Обсудить проект</span>
-                    </button>
-                    <p className={cl.textAfterBtn}>Мы моментально ответим вам</p>
-                </div>
-            </div>
+            <BlueContainer prevText='Готовы начать ваш проект'
+                           title='Более 2000+ довольных клиентов за 20+ лет работы'/>
             <LastWorksSection/>
-            <BottomBlock/>
+            {/*<BottomBlock/>*/}
         </div>
     );
 };
 
 export default Services;
-
 type propsTypeDeskWithImgSection={
     title:string
     titleMain:string
@@ -117,6 +104,7 @@ export const DeckWithImgSection = ({title,titleMain,desk,img,...props}:propsType
     )
 }
 const WebAccordionBlock = () => {
+    const navigate = useNavigate();
     return (
         <div className={cl.webAccordionWrap}>
             <div className={cl.webLeft}>
@@ -125,7 +113,7 @@ const WebAccordionBlock = () => {
                     процессы, повысить продуктивность и выйти на новый уровень. Создаем персонализированные инструменты,
                     чтобы наши клиенты могли расти, получили конкурентное преимущество и увеличили прибыль.
                 </p>
-                <button className={cl.moreBtn}>
+                <button className={cl.moreBtn} onClick={()=>{navigate('/web')}}>
                     <span>Подробнее</span>
                 </button>
             </div>
@@ -158,6 +146,28 @@ const WebAccordionBlock = () => {
                         <span><img src={arrowBtn} alt=""/></span>
                     </Link>
                 </div>
+            </div>
+        </div>
+    )
+}
+type blueBlockPropsType={
+    prevText:string
+    title:string
+}
+export const BlueContainer = ({prevText,title}:blueBlockPropsType) =>{
+
+    return(
+        <div className={cl.blueBlock}>
+            <div className={cl.blueDeck}>
+                <h6>{prevText}</h6>
+                <h4>{title}</h4>
+            </div>
+            <div className={cl.arrowForLink}><img src={arrowForLink} alt="arrowForLink"/></div>
+            <div className={cl.linkBtnWrap}>
+                <button className={cl.linkBtn}>
+                    <span>Обсудить проект</span>
+                </button>
+                <p className={cl.textAfterBtn}>Мы моментально ответим вам</p>
             </div>
         </div>
     )

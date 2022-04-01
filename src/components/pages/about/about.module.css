@@ -1,0 +1,152 @@
+.advantagesItemWrap {
+    margin-top: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titleItem {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.teamInfo {
+    width: 46%;
+    margin: 0 auto 90px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #8370FF;
+}
+
+.teamInfo h2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #0E153A;
+    margin: 16px 0 30px;
+}
+
+.teamDesk {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    text-align: center;
+    color: #5C5E6D;
+}
+
+.teamInfoSection {
+    margin-top: 150px;
+}
+
+
+
+.wrapItem {
+    width: 250px;
+    text-align: left;
+}
+.bottomTitleItem {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #F8F8F8;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.deskItem {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #5C5E6D;
+    margin-bottom: 15px;
+}
+
+.personText {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #8370FF;
+    margin: 0;
+}
+
+.personName {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 162.02%;
+    color: #0E153A;
+}
+
+.personItem {
+    width: 390px;
+    /*width: 22%;*/
+    text-align: left;
+    margin-bottom: 90px;
+}
+
+.wrapInfo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.personImgWrap {
+    /*width: inherit;*/
+    margin-bottom: 16px;
+}
+
+.personImgWrap img {
+    width: 100%;
+}
+
+.teamInfoSection button {
+    width: 230px;
+    height: 53px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 8px;
+    border: none;
+}
+
+.reviewSection {
+    margin-top: 150px;
+    background: #f8f8f8;
+    /*padding:150px 0;*/
+    padding: 10% 0;
+    text-align: left;
+}
+
+
+
+
+
+@media screen and (max-width: 993px) {
+    .advantagesItemWrap {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
