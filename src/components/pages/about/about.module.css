@@ -1,9 +1,10 @@
-.advantagesItemWrap{
+.advantagesItemWrap {
     margin-top: 105px;
     display: flex;
     justify-content: space-between;
 }
-.titleItem{
+
+.titleItem {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
@@ -11,19 +12,22 @@
     color: #0E153A;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.deskItem{
+
+.deskItem {
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
     color: #5C5E6D;
     margin-bottom: 15px;
-   
+
 }
-.teamInfo{
+
+.teamInfo {
     width: 53%;
     margin: 0 auto 90px;
 }
-.title{
+
+.title {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
@@ -31,7 +35,8 @@
     text-transform: uppercase;
     color: #8370FF;
 }
-.teamInfo h2{
+
+.teamInfo h2 {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
@@ -40,52 +45,61 @@
     color: #0E153A;
 }
 
-.teamDesk{
+.teamDesk {
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
     text-align: center;
     color: #5C5E6D;
 }
-.teamInfoSection{
+
+.teamInfoSection {
     margin-top: 150px;
 }
-.wrapItem{
+
+.wrapItem {
     width: 250px;
     text-align: left;
 }
-.personText{
+
+.personText {
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
     color: #8370FF;
     margin: 0;
 }
-.personName{
+
+.personName {
     font-weight: 700;
     font-size: 20px;
     line-height: 162.02%;
     color: #0E153A;
 }
-.personItem{
+
+.personItem {
     width: 390px;
     /*width: 22%;*/
     text-align: left;
     margin-bottom: 90px;
 }
-.wrapInfo{
+
+.wrapInfo {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.personImgWrap{
+
+.personImgWrap {
     /*width: inherit;*/
     margin-bottom: 16px;
 }
-.personImgWrap img{
+
+.personImgWrap img {
     width: 100%;
 }
-.teamInfoSection button{
+
+.teamInfoSection button {
     width: 230px;
     height: 53px;
     font-weight: 500;
@@ -97,9 +111,38 @@
     border-radius: 8px;
     border: none;
 }
-.reviewSection{
+
+.reviewSection {
     margin-top: 150px;
     background: #f8f8f8;
     padding: 0 150px;
     text-align: left;
+}
+
+
+@media screen and (max-width: 1222px) {
+
+    .wrapItem {
+        margin-top: 20px;
+    }
+
+    .advantagesItemWrap {
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .wrapInfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    .personItem{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 576px){
+    .personItem{
+        width: 100%;
+    }
 }

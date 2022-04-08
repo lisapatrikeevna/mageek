@@ -9,6 +9,7 @@
 .mapsSection {
     margin: 150px 0 80px;
 }
+
 .textBlock {
     width: 50%;
 }
@@ -67,47 +68,130 @@
 .mapWrap img {
     width: 100%;
 }
-.info{
+
+.info {
     display: flex;
     justify-content: space-between;
     text-align: left;
 }
-.info h4{
+
+.info h4 {
     font-weight: 700;
     font-size: 20px;
     line-height: 162.02%;
     color: #0E153A;
     margin: 10px 0px;
 }
-.phones a,.mails a,.adres p,.ask a{
+
+.phones a, .mails a, .adres p, .ask a {
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;
     color: #5C5E6D;
     margin-top: 10px;
 }
-.phones,.mails,.adres,.ask{
+
+.phones, .mails, .adres, .ask {
     height: 90px;
     display: flex;
     flex-direction: column;
     /*justify-content: space-between;*/
 }
-.titleWrap h3{
+
+.titleWrap h3 {
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
-    color: #0E153A!important;
+    color: #0E153A !important;
     margin-bottom: 80px;
     margin-top: 12px;
 }
-.titleWrap p{
+
+.titleWrap p {
     font-weight: 600;
     font-size: 16px;
     line-height: 19px;
     text-transform: uppercase;
     color: #8370FF;
 }
-.infoWrap{
+
+.infoWrap {
     text-align: left;
+}
+
+@media screen and (max-width: 1222px) {
+    .info {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .info>div{
+        min-width: 300px;
+        margin-top: 40px;
+    }
+    .titleWrap h3{
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 993px) {
+    .mapsSection {
+        margin: 100px 0 70px;
+    }
+
+    .textBlock h2,.titleWrap h3{
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mapsSection {
+        margin: 70px 0;
+    }
+
+    .textBlockWrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .textBlock {
+        width: 100%;
+    }
+
+    .desc {
+        margin-bottom: 30px;
+    }
+
+    .contactBtn {
+        margin-bottom: 50px;
+    }
+    .textBlock h2,.titleWrap h3{
+        font-size: 25px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .info {
+        justify-content: center;
+    }
+    .textBlock h2,.titleWrap h3{
+        font-size: 22px;
+        line-height: 24px;
+    }
+    .title,.titleWrap p{
+        font-size: 14px;
+        margin: 0;
+    }
+    .contactBtn{
+        width: 180px;
+        height: 40px;
+    }
+    .contactBtn p{
+        font-size: 12px;
+    }
+    .info>div{
+        min-width: 290px;
+    }
 }
