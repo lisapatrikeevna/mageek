@@ -20,7 +20,6 @@ const ReviewsCarousel = (props: propsType) => {
     const itemBanner = props.banner.map(i => <div className="itemWork">
         <img src={i.img} alt='img'/>
         <div className="legendReview">
-            i i i i i
             <h3 className='titleOffer'>{i.title}</h3>
             <p className='deskOffer'>{i.desk}</p>
             <Link to={i.btnLink} className='linkOffer'><p>{i.btnText}</p></Link>
