@@ -7,8 +7,11 @@ import {BottomBlock, lastCards} from "../home/home";
 import Offer from "../../common/offer/offer";
 
 type filterType= 'Все категории'|'WEB разработка'|'Системы и сервисы'|'Разработка приложений'|'Разработка ПО'|'Реклама'
+type propsType={
+    theme:boolean
+}
 
-const Portfolio = () => {
+const Portfolio = ({theme}:propsType) => {
     const [active,setActive]=useState('Все категории')
     const changeActive = (name:string) => {
         setActive(name)
@@ -35,7 +38,7 @@ const Portfolio = () => {
                     Все проекты
                 </Link>
             </div>
-            <BottomBlock/>
+            <BottomBlock theme={theme}/>
         </div>
 
     );

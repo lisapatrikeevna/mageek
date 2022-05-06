@@ -27,6 +27,12 @@
     color: #0E153A;
     margin-bottom: 30px;
 }
+h2.dark{
+    color: #fff;
+}
+h2.light{
+    color: #0E153A;
+}
 .lastWorks{
     margin-top: 150px;
     text-align: right;
@@ -78,6 +84,9 @@
     background: #0E153A;
     margin-top: 195px;
 }
+.letsDiscussDark{
+    background: linear-gradient(151.8deg, rgba(131, 112, 255, 0.55) -29.62%, #8370FF 82.55%);
+}
 .letsDiscuss h3,.letsDiscuss h5{
     color: #FFFFFF!important;
 }
@@ -122,13 +131,19 @@
     margin: 40px 0;
     width: 230px;
     height: 53px;
-    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
     border-radius: 8px;
     border: none;
     text-transform: uppercase;
-    color: #FFFFFF;
     font-weight: 500;
     font-size: 16px;
+}
+.leftBlockLinkBtnLight{
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    color: #FFFFFF;
+}
+.leftBlockLinkBtnDark{
+    background: #FFFFFF;
+    color: #0E153A;
 }
 .rightBlockDiscuss{
     width: 55%;

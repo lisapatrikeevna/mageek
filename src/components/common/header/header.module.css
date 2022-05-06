@@ -7,6 +7,10 @@
     margin: 0 auto;
     justify-content: space-between;
 }
+.headerWrapDark{
+    background: #1F1B2A;
+    color: #fff;
+}
 
 .logo {
     width: 180px;
@@ -31,7 +35,9 @@
     color: #0E153A;
     text-decoration: none;
 }
-
+.headerWrapDark .nav a{
+    color: #fff;
+}
 .right {
     display: flex;
 }
@@ -85,5 +91,8 @@
         left: 50%;
         margin-left: -150px;
     }
-
+.headerWrapDark .nav{
+    background: #1f1b2a;
+    border-color: #433b59;
+}
 }

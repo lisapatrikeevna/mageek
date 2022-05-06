@@ -6,7 +6,12 @@ import map from "../../../assets/images/geo.jpg";
 import Offer from "../../common/offer/offer";
 import {BottomBlock} from "../home/home";
 
-const Contact = () => {
+
+type propsType={
+    theme:boolean
+}
+
+const Contact = ({theme}:propsType) => {
     return (
         <>
             <div className={style.container}>
@@ -69,7 +74,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <BottomBlock/>
+            <BottomBlock theme={theme}/>
         </>
     );
 };

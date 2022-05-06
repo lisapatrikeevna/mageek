@@ -12,7 +12,11 @@ import {Link, useNavigate} from "react-router-dom";
 import webImg from './../../../assets/images/web.png'
 import {BottomBlock, LastWorksSection} from "../home/home";
 
-const Services = () => {
+
+type propsType={
+    theme:boolean
+}
+const Services = ({theme,...props}:propsType) => {
     return (
         <div className={style.container}>
             <Offer img={imgBg} title={'Создаем IT & Digital решения с гарантией!'} linkPath={'/path'}/>
@@ -22,6 +26,7 @@ const Services = () => {
                '                    Создаем персонализированные инструменты, чтобы наши клиенты могли расти, получили\n' +
                '                    конкурентное преимущество и увеличили прибыль.'} img={webImg}
                                textAfter={'Технологии которыми мы пользуемся'} iconF={htmlImj} iconS={htmlImj} iconT={htmlImj}
+                               theme={theme}
            />
             <div className={cl.accordionBlock}>
                 <Accordion>
@@ -66,13 +71,14 @@ const Services = () => {
             </div>
             <BlueContainer prevText='Готовы начать ваш проект'
                            title='Более 2000+ довольных клиентов за 20+ лет работы'/>
-            <LastWorksSection/>
+            <LastWorksSection theme={theme}/>
             {/*<BottomBlock/>*/}
         </div>
     );
 };
 
 export default Services;
+
 type propsTypeDeskWithImgSection={
     title:string
     titleMain:string
@@ -82,15 +88,16 @@ type propsTypeDeskWithImgSection={
     iconF?:any
     iconS?:any
     iconT?:any
+    theme?:boolean
 }
 export const DeckWithImgSection = ({title,titleMain,desk,img,...props}:propsTypeDeskWithImgSection)=>{
     return(
         <div className={cl.ourServices}>
             <div className={cl.textBlock}>
                 <p className={cl.title}>{title}</p>
-                <h2 className={cl.titleMain}>{titleMain}</h2>
+                <h2 className={`${cl.titleMain} theme && ${cl.titleMainDark}`}>{titleMain}</h2>
                 <p className={cl.desk}>{desk}</p>
-                {props.textAfter && <p className={cl.textAfter}>{props.textAfter}</p>}
+                {props.textAfter && <p className={`${cl.textAfter} theme && ${cl.textAfterDark}`}>{props.textAfter}</p>}
                 <div className={cl.imageList}>
                     {props.iconF && <img src={props.iconF} alt="htmlImj"/>}
                     {props.iconS && <img src={props.iconS} alt="htmlImj"/>}
@@ -150,6 +157,7 @@ const WebAccordionBlock = () => {
         </div>
     )
 }
+
 type blueBlockPropsType={
     prevText:string
     title:string

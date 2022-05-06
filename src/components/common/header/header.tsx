@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import cl from './header.module.css'
 import logo from './../../../assets/Logo.png'
+import logoDark from './../../../assets/LogoDark.png'
 import {Link} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import './../../../index.css'
@@ -8,7 +9,8 @@ import {FormControlLabel} from "@mui/material";
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import styled from '@emotion/styled';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import light from './../../../assets/images/light.png'
+import dark from './../../../assets/images/night.png'
 
 
 const MaterialUISwitch = styled(Switch)(( ) => ({
@@ -20,16 +22,14 @@ const MaterialUISwitch = styled(Switch)(( ) => ({
         padding: 0,
         transform: 'translateX(6px)',
         '&.Mui-checked': {
-            color: '#fff',
+            color:  '#9281FF',
             transform: 'translateX(22px)',
             '& .MuiSwitch-thumb:before': {
-                backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
-                    '#fff',
-                )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
+                backgroundImage: `url(${dark})`,
             },
             '& + .MuiSwitch-track': {
                 opacity: 1,
-                backgroundColor:  '#777cdd',
+                backgroundColor:  '#433F4C',
             },
         },
     },
@@ -46,9 +46,7 @@ const MaterialUISwitch = styled(Switch)(( ) => ({
             top: 0,
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center',
-            backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
-                '#fff',
-            )}" d="M9.305 1.667V3.75h1.389V1.667h-1.39zm-4.707 1.95l-.982.982L5.09 6.072l.982-.982-1.473-1.473zm10.802 0L13.927 5.09l.982.982 1.473-1.473-.982-.982zM10 5.139a4.872 4.872 0 00-4.862 4.86A4.872 4.872 0 0010 14.862 4.872 4.872 0 0014.86 10 4.872 4.872 0 0010 5.139zm0 1.389A3.462 3.462 0 0113.471 10a3.462 3.462 0 01-3.473 3.472A3.462 3.462 0 016.527 10 3.462 3.462 0 0110 6.528zM1.665 9.305v1.39h2.083v-1.39H1.666zm14.583 0v1.39h2.084v-1.39h-2.084zM5.09 13.928L3.616 15.4l.982.982 1.473-1.473-.982-.982zm9.82 0l-.982.982 1.473 1.473.982-.982-1.473-1.473zM9.305 16.25v2.083h1.389V16.25h-1.39z"/></svg>')`,
+            backgroundImage: `url(${light})`,
         },
     },
     '& .MuiSwitch-track': {
@@ -58,8 +56,11 @@ const MaterialUISwitch = styled(Switch)(( ) => ({
     },
 }));
 
-
-const Header = () => {
+type propsType={
+    theme:boolean
+    onChange:(value:boolean)=>void
+}
+const Header = ({theme,...props}:propsType) => {
     let[collaps,setCollaps]=useState(false)
     let onStyle = {}
     if(window.innerWidth < 993){
@@ -70,11 +71,14 @@ const Header = () => {
     const onClickHandler=()=>{
         setCollaps(!collaps)
     }
+    const onChangeMaterialUISwitch = (e: any)=>{
+        props.onChange(e.target.checked)
+    }
 
     return (
-        <div className={cl.headerWrap}>
+        <div className={`${cl.headerWrap} ${theme? '' : cl.headerWrapDark}`}>
             <NavLink to='/' className={cl.logo}>
-                <img src={logo} alt="logo"/>
+                <img src={theme? logo: logoDark} alt="logo"/>
             </NavLink>
             {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/> }
             <div className={cl.nav}  style={onStyle}>
@@ -88,8 +92,11 @@ const Header = () => {
 
             <div className={cl.right}>
                 <FormControlLabel
-                    control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-                    label="RU"
+                    // control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked checkedIcon={light}/>}
+                    control={<MaterialUISwitch sx={{ m: 1 }} theme />}
+                    label=" "
+                    checked={theme}
+                    onChange={onChangeMaterialUISwitch}
                 />
                 {window.innerWidth > 993 &&  <button className={cl.contactBtn}>Связаться с нами</button>}
             </div>

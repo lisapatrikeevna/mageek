@@ -470,7 +470,11 @@ export const reviewsArr = [
     },
 ]
 
-const About = () => {
+type propsType={
+    theme:boolean
+}
+
+const About = ({theme}:propsType) => {
     const advantagesItems = advantagesArr.map(i => {
         return <div className={cl.wrapItem}>
             <h3 className={cl.titleItem}>{i.title}</h3>
@@ -524,14 +528,14 @@ const About = () => {
                     <button>показать ещё</button>
                 </div>
             </div>
-            <ReviewsCarousel banner={reviewsArr} marginTop={'0'} marginBottom={'150px'}/>
+            <ReviewsCarousel banner={reviewsArr} marginTop={'0'} marginBottom={'150px'} theme={theme}/>
             <div className={style.container}>
                 <DeckWithImgSection title={'Наша особенность'} titleMain={'Преимущества сотрудничать с нами'}
                                     desk={'Качество - это основа стратегии развития и процветания нашего агентства. Ваш проект может быть небольшим, сложным или совершенно сумасшедшим, мы в любом случае реализуем его на высшем уровне. Мы не берем брак! Мы не делаем брак! Мы не передаем брак!'}
                                     img={aboutLast}/>
                 <div className={cl.advantagesItemWrap}>{advLastList}</div>
             </div>
-            <BottomBlock/>
+            <BottomBlock theme={theme}/>
         </>
     );
 };

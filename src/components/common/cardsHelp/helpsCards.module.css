@@ -1,5 +1,5 @@
 .helpsCardsItem{
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
     border: 1px solid #E1E1E1;
     box-sizing: border-box;
     border-radius: 20px;
@@ -22,6 +22,12 @@
     line-height: 48px;
     color: #0E153A;
     margin: 0 0 16px 0;
+}
+.dark h3,.dark p{
+    color: #fff;
+}
+.light h3,.light p{
+    color: #0E153A;
 }
 .helpsCardsItemInner p{
     margin: 0;

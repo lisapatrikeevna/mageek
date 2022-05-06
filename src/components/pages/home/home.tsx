@@ -162,7 +162,11 @@ const clientArr = [
         img: clientImg
     },
 ]
-const Home = () => {
+
+type propsType={
+    theme:boolean
+}
+const Home = ({theme,...props}:propsType) => {
     const clientItem = clientArr.map(i => <div key={i.id} className={cl.clientImg}><img src={i.img} alt="clientImg"/>
     </div>)
     return (
@@ -171,36 +175,36 @@ const Home = () => {
                 <CarouselComponent banner={listBanners}/>
                 <div className={cl.helpsBlock}>
                     <p className={cl.title}>Наши услуги</p>
-                    <h2>КАК мы можем вам помочь</h2>
+                    <h2 className={`${!theme? cl.dark: cl.light}`}>КАК мы можем вам помочь</h2>
                     <div className={cl.helpCardsWrap}>
                         {helpCards.map(i => {
-                            return <HelpsCards key={i.id} cardItem={i}/>
+                            return <HelpsCards key={i.id} cardItem={i} theme={theme}/>
                         })}
                     </div>
                 </div>
-                <LastWorksSection/>
+                <LastWorksSection theme={theme}/>
             </div>
-            <ReviewsCarousel banner={reviewsArr} marginTop={'150px'} marginBottom={'150px'}/>
+            <ReviewsCarousel banner={reviewsArr} marginTop={'150px'} marginBottom={'150px'} theme={theme}/>
             <div className={cl.clientBlock}>
                 <div className={cl.container}>
                     <p className={cl.title}>СЧАСТЛИВЫЕ КЛИЕНТЫ</p>
-                    <h2>Наши клиенты</h2>
+                    <h2 className={`${!theme? cl.dark: cl.light}`}>Наши клиенты</h2>
                     <div className={cl.clientArr}>{clientItem}</div>
                 </div>
             </div>
-            <BottomBlock/>
+            <BottomBlock theme={theme}/>
         </>
     );
 };
 
 export default Home;
 
-export const LastWorksSection = () => {
+export const LastWorksSection = ({theme}:propsType) => {
     return (
         <div className={cl.lastWorks}>
             <div className={cl.textBlockLastW}>
                 <p className={cl.title}>2000+ УСПЕШНЫХ ПРОЕКТОВ В IT</p>
-                <h2>Последние проекты</h2>
+                <h2 className={`${!theme? cl.dark: cl.light}`}>Последние проекты</h2>
                 <p className={cl.lastWorksDesk}>
                     За 21 год мы приобрели крутой опыт и лучше остальных знаем,
                     на чем фокусироваться, как не допустить фатальных ошибок и как
@@ -219,14 +223,14 @@ export const LastWorksSection = () => {
         </div>
     )
 }
-export const BottomBlock = () => {
+export const BottomBlock = ({theme}:propsType) => {
     return (
-        <div className={cl.letsDiscuss}>
+        <div className={`${cl.letsDiscuss} theme && ${cl.letsDiscussDark}`}>
             <div className={cl.container}>
                 <div className={cl.leftBlockDiscuss}>
                     <h5>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h5>
                     <h3>ДАВАЙТЕ обсудим ВАШ БИЗНЕС!</h3>
-                    <button className={cl.leftBlockLinkBtn}>Связаться с нами</button>
+                    <button className={`${cl.leftBlockLinkBtn} ${theme? cl.leftBlockLinkBtnLight: cl.leftBlockLinkBtnDark}`}>Связаться с нами</button>
                     <p className={cl.leftBlockDiscussDesk}>Звоните, пишите,<br/>
                         пообщаемся, договоримся!</p>
                     <p className={cl.leftBlockDiscussLinkT}>office+2536076@wezom.com.ua</p>

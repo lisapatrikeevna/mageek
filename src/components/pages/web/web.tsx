@@ -37,7 +37,11 @@ const infoList = [
         description: 'Разрабатываем четкий план действий для вашего интернет-магазина, помогаем определить стратегию развития и масштабирования компании. Анализ основывается на сборе данных по конкурентам, целевой аудитории, специфике бизнеса.'
     },
 ]
-const Web = () => {
+type propsType={
+    theme:boolean
+}
+
+const Web = ({theme}:propsType) => {
     return (
         <>
             <div className={style.container}>
@@ -47,7 +51,7 @@ const Web = () => {
                                         'Мы предлагаем комплексную разработку от идеи до запуска и поддержки.'}
                                     img={img}/>
                 <InfoListBlock arr={infoList}/>
-                <LastWorksSection/>
+                <LastWorksSection theme={theme}/>
             </div>
             <div className={cl.blueContainerWrap}>
                 <div className={style.container}>
@@ -55,11 +59,11 @@ const Web = () => {
                                    title='Более 2000+ довольных клиентов за 20+ лет работы'/>
                 </div>
             </div>
-            <ReviewsCarousel banner={reviewsArr} marginTop={'0'} marginBottom={'150px'}/>
+            <ReviewsCarousel banner={reviewsArr} marginTop={'0'} marginBottom={'150px'} theme={theme}/>
             <div className={style.container}>
 
             </div>
-            <BottomBlock/>
+            <BottomBlock theme={theme}/>
         </>
     )
 };
