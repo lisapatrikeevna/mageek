@@ -10,7 +10,7 @@ type propsType = {
 const HelpsCards = ({cardItem,theme}: propsType) => {
     return (
         <div className={cl.helpsCardsItem}>
-            <div className={`${cl.helpsCardsItemInner} ${!theme? cl.dark: cl.light}`}>
+            <div className={`${cl.helpsCardsItemInner} ${theme? cl.dark: cl.light}`}>
                 <span className={cl.icon}> {cardItem.icon}</span>
                 {/*{cardItem.icon? <span>{cardItem.icon}</span> : ''}*/}
                 <h3>{cardItem.title}</h3>

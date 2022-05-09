@@ -29,7 +29,7 @@ const Services = ({theme,...props}:propsType) => {
                                theme={theme}
            />
             <div className={cl.accordionBlock}>
-                <Accordion>
+                <Accordion className={`!theme && ${ cl.darkAccordion}`}>
                     <AccordionSummary
                         expandIcon={<img src={arrow} alt='arrow'/>}
                         aria-controls="panel1a-content"
@@ -42,7 +42,7 @@ const Services = ({theme,...props}:propsType) => {
                         <WebAccordionBlock/>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion>
+                <Accordion className={`!theme && ${cl.darkAccordion}`}>
                     <AccordionSummary
                         expandIcon={<img src={arrow} alt='arrow'/>}
                         aria-controls="panel2a-content"
@@ -58,7 +58,7 @@ const Services = ({theme,...props}:propsType) => {
                         </p>
                     </AccordionDetails>
                 </Accordion>
-                <Accordion>
+                <Accordion className={`theme && ${cl.darkAccordion}`}>
                     <AccordionSummary
                         expandIcon={<img src={arrow} alt='arrow'/>}
                         aria-controls="panel3a-content"
@@ -95,9 +95,9 @@ export const DeckWithImgSection = ({title,titleMain,desk,img,...props}:propsType
         <div className={cl.ourServices}>
             <div className={cl.textBlock}>
                 <p className={cl.title}>{title}</p>
-                <h2 className={`${cl.titleMain} theme && ${cl.titleMainDark}`}>{titleMain}</h2>
+                <h2 className={`${cl.titleMain}  ${props.theme && cl.titleMainDark}`}>{titleMain}</h2>
                 <p className={cl.desk}>{desk}</p>
-                {props.textAfter && <p className={`${cl.textAfter} theme && ${cl.textAfterDark}`}>{props.textAfter}</p>}
+                {props.textAfter && <p className={`${cl.textAfter}  ${props.theme && cl.textAfterDark}`}>{props.textAfter}</p>}
                 <div className={cl.imageList}>
                     {props.iconF && <img src={props.iconF} alt="htmlImj"/>}
                     {props.iconS && <img src={props.iconS} alt="htmlImj"/>}
@@ -110,6 +110,7 @@ export const DeckWithImgSection = ({title,titleMain,desk,img,...props}:propsType
         </div>
     )
 }
+
 const WebAccordionBlock = () => {
     const navigate = useNavigate();
     return (

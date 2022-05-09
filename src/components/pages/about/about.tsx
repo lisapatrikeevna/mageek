@@ -491,7 +491,7 @@ const About = ({theme}:propsType) => {
 
     return (
         <>
-            <div className={style.container}>
+            <div className={`${style.container} theme && ${cl.darkTheme}`}>
                 <Offer img={imgBg} title={'О Mageek Soft'}
                        text={'Профессионализм и клиентоориентированный подход к делу, ' +
                            'начиная с первого контакта и до завершения проекта'} linkPath={'/jjj'}/>
@@ -529,11 +529,11 @@ const About = ({theme}:propsType) => {
                 </div>
             </div>
             <ReviewsCarousel banner={reviewsArr} marginTop={'0'} marginBottom={'150px'} theme={theme}/>
-            <div className={style.container}>
+            <div className={`${style.container} theme && ${cl.darkTheme}`}  >
                 <DeckWithImgSection title={'Наша особенность'} titleMain={'Преимущества сотрудничать с нами'}
                                     desk={'Качество - это основа стратегии развития и процветания нашего агентства. Ваш проект может быть небольшим, сложным или совершенно сумасшедшим, мы в любом случае реализуем его на высшем уровне. Мы не берем брак! Мы не делаем брак! Мы не передаем брак!'}
                                     img={aboutLast}/>
-                <div className={cl.advantagesItemWrap}>{advLastList}</div>
+                <div className={`${cl.advantagesItemWrap} ${cl.advLastList}`}>{advLastList}</div>
             </div>
             <BottomBlock theme={theme}/>
         </>

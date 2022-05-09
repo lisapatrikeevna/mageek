@@ -25,7 +25,7 @@ const ReviewsCarousel = ({theme,...props}: propsType) => {
     const [value, setValue] = React.useState<number | null>(2);
     const itemBanner = props.banner.map(i => {
         // setValue()
-        return <div className={ `itemReview ${!theme && 'dark'}` } key={i.img}>
+        return <div className={ `itemReview ${theme && 'dark'}` } key={i.img}>
             <div className="legendReviews">
                 {/*<Rating name="read-only" value={value} readOnly />*/}
                 <Rating name="read-only" value={i.rating} readOnly/>
@@ -50,14 +50,14 @@ const ReviewsCarousel = ({theme,...props}: propsType) => {
     const reviewSectionStyle={
         marginTop:props.marginTop,
         marginBottom:props.marginBottom,
-        background:theme?  '#f8f8f8' :'#353043'
+        background:!theme?  '#f8f8f8' :'#353043'
     }
 
     return (
         <div className='reviewSection' style={reviewSectionStyle}>
             <div className={style.container}>
                 <p className='reviewTitle'>отзывы</p>
-                <h2 className='reviewText' style={{color:theme? '#0E153A':'#fff'}}>Что о нас говорят</h2>
+                <h2 className='reviewText' style={{color:!theme? '#0E153A':'#fff'}}>Что о нас говорят</h2>
                 <Carousel className='reviews' centerMode={true} arrows
                           prevArrow={<LeftOutlined/>} nextArrow={<RightOutlined/>}
                           slidesToShow={ countSlider}

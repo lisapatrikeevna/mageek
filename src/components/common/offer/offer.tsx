@@ -13,7 +13,8 @@ const Offer = (props:propsType) => {
     let bgImg =props.img
     const bgWidth = {
         background: windowWidth<993.9 ?"url("+bgImg+")no-repeat center left/cover": 'transparent',
-        borderRadius :'15px'
+        borderRadius :'20px',
+        overflow:'hidden'
     }
 
     return (

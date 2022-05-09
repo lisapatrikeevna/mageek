@@ -29,9 +29,9 @@ const Footer = ({theme}: propsType) => {
     // console.log('clTheme',theme && cl.footerWrapDarks);
     return (
         <>
-            <div className={`${cl.footerWrap} theme && ${cl.footerWrapDark}`} onClick={onClickHandler}>
+            <div className={`${cl.footerWrap}  ${theme && cl.footerWrapDark}`} onClick={onClickHandler}>
                 <div className={cl.logo}>
-                    <img src={theme ? logo : logoDark} alt="logo"/>
+                    <img src={!theme ? logo : logoDark} alt="logo"/>
                 </div>
                 <div className={cl.nav} style={onStyle}>
                     <Link to='/'>home</Link>
@@ -41,9 +41,9 @@ const Footer = ({theme}: propsType) => {
                     <Link to='/contacts'>contacts</Link>
                 </div>
                 <div className={cl.right}>
-                    <img src={theme ? inst : instBl} alt="inst"/>
-                    <img src={theme ? tg : tgBl} alt="tg"/>
-                    <img src={theme ? linked : linkedBl} alt="linked"/>
+                    <img src={!theme ? inst : instBl} alt="inst"/>
+                    <img src={!theme ? tg : tgBl} alt="tg"/>
+                    <img src={!theme ? linked : linkedBl} alt="linked"/>
                     {window.innerWidth < 451 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/>}
                 </div>
             </div>

@@ -175,7 +175,7 @@ const Home = ({theme,...props}:propsType) => {
                 <CarouselComponent banner={listBanners}/>
                 <div className={cl.helpsBlock}>
                     <p className={cl.title}>Наши услуги</p>
-                    <h2 className={`${!theme? cl.dark: cl.light}`}>КАК мы можем вам помочь</h2>
+                    <h2 className={`${theme? cl.dark: cl.light}`}>КАК мы можем вам помочь</h2>
                     <div className={cl.helpCardsWrap}>
                         {helpCards.map(i => {
                             return <HelpsCards key={i.id} cardItem={i} theme={theme}/>
@@ -188,7 +188,7 @@ const Home = ({theme,...props}:propsType) => {
             <div className={cl.clientBlock}>
                 <div className={cl.container}>
                     <p className={cl.title}>СЧАСТЛИВЫЕ КЛИЕНТЫ</p>
-                    <h2 className={`${!theme? cl.dark: cl.light}`}>Наши клиенты</h2>
+                    <h2 className={`${theme? cl.dark: cl.light}`}>Наши клиенты</h2>
                     <div className={cl.clientArr}>{clientItem}</div>
                 </div>
             </div>
@@ -204,7 +204,7 @@ export const LastWorksSection = ({theme}:propsType) => {
         <div className={cl.lastWorks}>
             <div className={cl.textBlockLastW}>
                 <p className={cl.title}>2000+ УСПЕШНЫХ ПРОЕКТОВ В IT</p>
-                <h2 className={`${!theme? cl.dark: cl.light}`}>Последние проекты</h2>
+                <h2 className={`${theme? cl.dark: cl.light}`}>Последние проекты</h2>
                 <p className={cl.lastWorksDesk}>
                     За 21 год мы приобрели крутой опыт и лучше остальных знаем,
                     на чем фокусироваться, как не допустить фатальных ошибок и как

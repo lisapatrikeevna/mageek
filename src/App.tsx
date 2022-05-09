@@ -11,13 +11,13 @@ import About from "./components/pages/about/about";
 import Web from "./components/pages/web/web";
 
 function App() {
-    const [lightTheme,setLightTheme]=useState(false)
+    const [lightTheme,setLightTheme]=useState(true)
     const onChangeMaterialUISwitch=(value:boolean)=>{
         setLightTheme(value)
     }
 
   return (
-    <div className={lightTheme?'App': 'App dark'}>
+    <div className={!lightTheme?'App': 'App dark'}>
       <Header theme={lightTheme} onChange={onChangeMaterialUISwitch}/>
         <Routes>
             <Route path='/' element={<Home theme={lightTheme}/>}/>

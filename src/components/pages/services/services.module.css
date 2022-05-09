@@ -126,7 +126,13 @@
 .accordionBlock {
     margin-top: 200px;
 }
-
+.darkAccordion{
+    background: #1f1b2a;
+    color:#fff
+}
+.darkAccordion a{
+    color: #FFFFFF;
+}
 .blueBlock {
     /*height: 399px;*/
     background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);

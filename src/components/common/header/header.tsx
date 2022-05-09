@@ -76,9 +76,9 @@ const Header = ({theme,...props}:propsType) => {
     }
 
     return (
-        <div className={`${cl.headerWrap} ${theme? '' : cl.headerWrapDark}`}>
+        <div className={`${cl.headerWrap} ${!theme? '' : cl.headerWrapDark}`}>
             <NavLink to='/' className={cl.logo}>
-                <img src={theme? logo: logoDark} alt="logo"/>
+                <img src={!theme? logo: logoDark} alt="logo"/>
             </NavLink>
             {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/> }
             <div className={cl.nav}  style={onStyle}>

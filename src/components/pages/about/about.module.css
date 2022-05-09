@@ -89,16 +89,13 @@
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .personImgWrap {
     /*width: inherit;*/
     margin-bottom: 16px;
 }
-
 .personImgWrap img {
     width: 100%;
 }
-
 .teamInfoSection button {
     width: 230px;
     height: 53px;
@@ -111,14 +108,30 @@
     border-radius: 8px;
     border: none;
 }
-
 .reviewSection {
     margin-top: 150px;
     background: #f8f8f8;
     padding: 0 150px;
     text-align: left;
 }
-
+.darkTheme .titleItem,.darkTheme .deskItem,
+.darkTheme .teamInfo h2,.darkTheme .teamDesk,
+.darkTheme .personName{
+    color: #FFFFFF;
+}
+.darkTheme .advLastList .wrapItem h3{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    border-radius: 10px;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: #F8F8F8;
+    font-size: 34px;
+}
 
 @media screen and (max-width: 1222px) {
 
