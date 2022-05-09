@@ -136,7 +136,7 @@
 .blueBlock {
     /*height: 399px;*/
     background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
-    box-shadow: 0px 17px 59px rgba(0, 116, 225, 0.31);
+    box-shadow: 0 17px 59px rgba(0, 116, 225, 0.31);
     border-radius: 30px;
     color: #fff;
     display: flex;
