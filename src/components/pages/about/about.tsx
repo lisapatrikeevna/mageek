@@ -470,11 +470,11 @@ export const reviewsArr = [
     },
 ]
 
-type propsType={
-    theme:boolean
+type propsType = {
+    theme: boolean
 }
 
-const About = ({theme}:propsType) => {
+const About = ({theme}: propsType) => {
     const advantagesItems = advantagesArr.map(i => {
         return <div className={cl.wrapItem}>
             <h3 className={cl.titleItem}>{i.title}</h3>
@@ -494,7 +494,7 @@ const About = ({theme}:propsType) => {
             <div className={`${style.container} theme && ${cl.darkTheme}`}>
                 <Offer img={imgBg} title={'О Mageek Soft'}
                        text={'Профессионализм и клиентоориентированный подход к делу, ' +
-                           'начиная с первого контакта и до завершения проекта'} linkPath={'/jjj'}/>
+                       'начиная с первого контакта и до завершения проекта'} linkPath={'/jjj'}/>
                 <DeckWithImgSection title={'наши достижения'} titleMain={'МЫ ПОЛУЧАЕМ УДОВОЛЬСТВИЕ ОТ СВОЕЙ РАБОТЫ'}
                                     desk={`Помогаем развивать бизнес онлайн, делаем продукты высокой конверсии. Внедряем
                                         новые способы продвижения в бизнесы наших клиентов. Мы прекрасно понимаем, каким должен быть 
@@ -503,6 +503,7 @@ const About = ({theme}:propsType) => {
                                         Мы прекрасно понимаем, каким должен быть 
                                         интернет-продукт и как этого добиться. Мы объединяем цифровое мастерство с новаторским мышлением, 
                                         чтобы реализовать все ваши идеи и пожелания.`} img={img}
+                                    theme={theme}
                 />
                 <div className={cl.advantagesItemWrap}>{advantagesItems}</div>
                 <div className={cl.teamInfoSection}>
@@ -529,10 +530,11 @@ const About = ({theme}:propsType) => {
                 </div>
             </div>
             <ReviewsCarousel banner={reviewsArr} marginTop={'0'} marginBottom={'150px'} theme={theme}/>
-            <div className={`${style.container} theme && ${cl.darkTheme}`}  >
+            <div className={`${style.container} theme && ${cl.darkTheme}`}>
                 <DeckWithImgSection title={'Наша особенность'} titleMain={'Преимущества сотрудничать с нами'}
                                     desk={'Качество - это основа стратегии развития и процветания нашего агентства. Ваш проект может быть небольшим, сложным или совершенно сумасшедшим, мы в любом случае реализуем его на высшем уровне. Мы не берем брак! Мы не делаем брак! Мы не передаем брак!'}
-                                    img={aboutLast}/>
+                                    img={aboutLast}
+                                    theme={theme}/>
                 <div className={`${cl.advantagesItemWrap} ${cl.advLastList}`}>{advLastList}</div>
             </div>
             <BottomBlock theme={theme}/>

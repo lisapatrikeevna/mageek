@@ -13,91 +13,95 @@ import webImg from './../../../assets/images/web.png'
 import {BottomBlock, LastWorksSection} from "../home/home";
 
 
-type propsType={
-    theme:boolean
+type propsType = {
+    theme: boolean
 }
-const Services = ({theme,...props}:propsType) => {
+const Services = ({theme, ...props}: propsType) => {
     return (
-        <div className={style.container}>
-            <Offer img={imgBg} title={'Создаем IT & Digital решения с гарантией!'} linkPath={'/path'}/>
-           <DeckWithImgSection title={'Наши услуги'} titleMain={'Разработка под ключ'}
-                               desk={'Мы создаем инструменты для диджитализации и масштабирования бизнеса,\n' +
-               '                    помогаем оптимизировать процессы, повысить продуктивность и выйти на новый уровень.\n' +
-               '                    Создаем персонализированные инструменты, чтобы наши клиенты могли расти, получили\n' +
-               '                    конкурентное преимущество и увеличили прибыль.'} img={webImg}
-                               textAfter={'Технологии которыми мы пользуемся'} iconF={htmlImj} iconS={htmlImj} iconT={htmlImj}
-                               theme={theme}
-           />
-            <div className={cl.accordionBlock}>
-                <Accordion className={`!theme && ${ cl.darkAccordion}`}>
-                    <AccordionSummary
-                        expandIcon={<img src={arrow} alt='arrow'/>}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
-                        className={cl.name}
-                    >
-                        <p>Web разработка</p>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <WebAccordionBlock/>
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion className={`!theme && ${cl.darkAccordion}`}>
-                    <AccordionSummary
-                        expandIcon={<img src={arrow} alt='arrow'/>}
-                        aria-controls="panel2a-content"
-                        id="panel2a-header"
-                        className={cl.name}
-                    >
-                        <p>Разработка приложений</p>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-                            malesuada lacus ex, sit amet blandit leo lobortis eget.
-                        </p>
-                    </AccordionDetails>
-                </Accordion>
-                <Accordion className={`theme && ${cl.darkAccordion}`}>
-                    <AccordionSummary
-                        expandIcon={<img src={arrow} alt='arrow'/>}
-                        aria-controls="panel3a-content"
-                        id="panel3a-header"
-                        className={cl.name}
-                    >
-                        <p>Disabled Accordion</p>
-                    </AccordionSummary>
-                </Accordion>
+        <>
+            <div className={style.container}>
+                <Offer img={imgBg} title={'Создаем IT & Digital решения с гарантией!'} linkPath={'/path'}/>
+                <DeckWithImgSection title={'Наши услуги'} titleMain={'Разработка под ключ'}
+                                    desk={'Мы создаем инструменты для диджитализации и масштабирования бизнеса,\n' +
+                                    '                    помогаем оптимизировать процессы, повысить продуктивность и выйти на новый уровень.\n' +
+                                    '                    Создаем персонализированные инструменты, чтобы наши клиенты могли расти, получили\n' +
+                                    '                    конкурентное преимущество и увеличили прибыль.'} img={webImg}
+                                    textAfter={'Технологии которыми мы пользуемся'} iconF={htmlImj} iconS={htmlImj}
+                                    iconT={htmlImj}
+                                    theme={theme}
+                />
+                <div className={cl.accordionBlock}>
+                    <Accordion className={`theme && ${cl.darkAccordion}`}>
+                        <AccordionSummary
+                            expandIcon={<img src={arrow} alt='arrow'/>}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                            className={cl.name}
+                        >
+                            <p>Web разработка</p>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <WebAccordionBlock/>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion className={`theme && ${cl.darkAccordion}`}>
+                        <AccordionSummary
+                            expandIcon={<img src={arrow} alt='arrow'/>}
+                            aria-controls="panel2a-content"
+                            id="panel2a-header"
+                            className={cl.name}
+                        >
+                            <p>Разработка приложений</p>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                malesuada lacus ex, sit amet blandit leo lobortis eget.
+                            </p>
+                        </AccordionDetails>
+                    </Accordion>
+                    <Accordion className={`theme && ${cl.darkAccordion}`}>
+                        <AccordionSummary
+                            expandIcon={<img src={arrow} alt='arrow'/>}
+                            aria-controls="panel3a-content"
+                            id="panel3a-header"
+                            className={cl.name}
+                        >
+                            <p>Disabled Accordion</p>
+                        </AccordionSummary>
+                    </Accordion>
+                </div>
+                <BlueContainer prevText='Готовы начать ваш проект'
+                               title='Более 2000+ довольных клиентов за 20+ лет работы'/>
+                <LastWorksSection theme={theme}/>
             </div>
-            <BlueContainer prevText='Готовы начать ваш проект'
-                           title='Более 2000+ довольных клиентов за 20+ лет работы'/>
-            <LastWorksSection theme={theme}/>
-            {/*<BottomBlock/>*/}
-        </div>
+            <BottomBlock theme={theme}/>
+        </>
     );
 };
 
 export default Services;
 
-type propsTypeDeskWithImgSection={
-    title:string
-    titleMain:string
-    desk:string
-    img:any
-    textAfter?:string
-    iconF?:any
-    iconS?:any
-    iconT?:any
-    theme?:boolean
+type propsTypeDeskWithImgSection = {
+    title: string
+    titleMain: string
+    desk: string
+    img: any
+    textAfter?: string
+    iconF?: any
+    iconS?: any
+    iconT?: any
+    theme?: boolean
 }
-export const DeckWithImgSection = ({title,titleMain,desk,img,...props}:propsTypeDeskWithImgSection)=>{
-    return(
+export const DeckWithImgSection = ({title, titleMain, desk, img, ...props}: propsTypeDeskWithImgSection) => {
+    return (
         <div className={cl.ourServices}>
             <div className={cl.textBlock}>
                 <p className={cl.title}>{title}</p>
                 <h2 className={`${cl.titleMain}  ${props.theme && cl.titleMainDark}`}>{titleMain}</h2>
                 <p className={cl.desk}>{desk}</p>
-                {props.textAfter && <p className={`${cl.textAfter}  ${props.theme && cl.textAfterDark}`}>{props.textAfter}</p>}
+                {props.textAfter &&
+                <p className={`${cl.textAfter}  ${props.theme && cl.textAfterDark}`}>{props.textAfter}</p>}
                 <div className={cl.imageList}>
                     {props.iconF && <img src={props.iconF} alt="htmlImj"/>}
                     {props.iconS && <img src={props.iconS} alt="htmlImj"/>}
@@ -121,7 +125,9 @@ const WebAccordionBlock = () => {
                     процессы, повысить продуктивность и выйти на новый уровень. Создаем персонализированные инструменты,
                     чтобы наши клиенты могли расти, получили конкурентное преимущество и увеличили прибыль.
                 </p>
-                <button className={cl.moreBtn} onClick={()=>{navigate('/web')}}>
+                <button className={cl.moreBtn} onClick={() => {
+                    navigate('/web')
+                }}>
                     <span>Подробнее</span>
                 </button>
             </div>
@@ -159,13 +165,13 @@ const WebAccordionBlock = () => {
     )
 }
 
-type blueBlockPropsType={
-    prevText:string
-    title:string
+type blueBlockPropsType = {
+    prevText: string
+    title: string
 }
-export const BlueContainer = ({prevText,title}:blueBlockPropsType) =>{
+export const BlueContainer = ({prevText, title}: blueBlockPropsType) => {
 
-    return(
+    return (
         <div className={cl.blueBlock}>
             <div className={cl.blueDeck}>
                 <h6>{prevText}</h6>

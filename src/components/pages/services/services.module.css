@@ -127,8 +127,8 @@
     margin-top: 200px;
 }
 .darkAccordion{
-    background: #1f1b2a;
-    color:#fff
+    background: #1f1b2a!important;
+    color:#fff!important;
 }
 .darkAccordion a{
     color: #FFFFFF;
