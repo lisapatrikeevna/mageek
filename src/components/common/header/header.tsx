@@ -2,18 +2,20 @@ import React, {useState} from 'react';
 import cl from './header.module.css'
 import logo from './../../../assets/Logo.png'
 import logoDark from './../../../assets/LogoDark.png'
-import {Link} from 'react-router-dom';
 import {NavLink} from 'react-router-dom';
 import './../../../index.css'
 import {FormControlLabel} from "@mui/material";
-import Switch, { SwitchProps } from '@mui/material/Switch';
+import Switch from '@mui/material/Switch';
 import styled from '@emotion/styled';
 import MenuIcon from '@mui/icons-material/Menu';
 import light from './../../../assets/images/light.png'
 import dark from './../../../assets/images/night.png'
+import {useTranslation} from "react-i18next";
+import LanguageIcon from '@mui/icons-material/Language';
+import i18next from "i18next";
+import cookies from 'js-cookie'
 
-
-const MaterialUISwitch = styled(Switch)(( ) => ({
+const MaterialUISwitch = styled(Switch)(() => ({
     width: 62,
     height: 34,
     padding: 7,
@@ -22,14 +24,14 @@ const MaterialUISwitch = styled(Switch)(( ) => ({
         padding: 0,
         transform: 'translateX(6px)',
         '&.Mui-checked': {
-            color:  '#9281FF',
+            color: '#9281FF',
             transform: 'translateX(22px)',
             '& .MuiSwitch-thumb:before': {
                 backgroundImage: `url(${dark})`,
             },
             '& + .MuiSwitch-track': {
                 opacity: 1,
-                backgroundColor:  '#433F4C',
+                backgroundColor: '#433F4C',
             },
         },
     },
@@ -56,52 +58,89 @@ const MaterialUISwitch = styled(Switch)(( ) => ({
     },
 }));
 
-type propsType={
-    theme:boolean
-    onChange:(value:boolean)=>void
+type propsType = {
+    theme: boolean
+    onChange: (value: boolean) => void
 }
-const Header = ({theme,...props}:propsType) => {
-    let[collaps,setCollaps]=useState(false)
+const Header = ({theme, ...props}: propsType) => {
+    let [collapse, setCollapse] = useState(false)
+    let [openLang, setOpenLang] = useState(false)
     let onStyle = {}
-    if(window.innerWidth < 993){
+    if (window.innerWidth < 993) {
         onStyle = {
-            visibility:  collaps? "visible": "collapse"
+            visibility: collapse ? "visible" : "collapse"
         }
     }
-    const onClickHandler=()=>{
-        setCollaps(!collaps)
+    const onClickHandler = () => {
+        setCollapse(!collapse)
     }
-    const onChangeMaterialUISwitch = (e: any)=>{
+    const onChangeMaterialUISwitch = (e: any) => {
         props.onChange(e.target.checked)
     }
 
-    return (
-        <div className={`${cl.headerWrap} ${!theme? '' : cl.headerWrapDark}`}>
-            <NavLink to='/' className={cl.logo}>
-                <img src={!theme? logo: logoDark} alt="logo"/>
-            </NavLink>
-            {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/> }
-            <div className={cl.nav}  style={onStyle}>
-                <NavLink to='/' >home</NavLink>
-                <NavLink to='/services' >Услуги</NavLink>
-                <NavLink to='/works' >Портфолио</NavLink>
-                {/*<NavLink to='/' >Экспертиза</NavLink>*/}
-                <NavLink to='/about' >О нас</NavLink>
-                <NavLink to='/contacts' >Контакты</NavLink>
-            </div>
+    //Translation
+    const {t} = useTranslation();
 
+    return (
+        <div className={`${cl.headerWrap} ${!theme ? '' : cl.headerWrapDark}`}
+        onClick={()=>setOpenLang(!openLang)}>
+            <NavLink to='/' className={cl.logo}>
+                <img src={!theme ? logo : logoDark} alt="logo"/>
+            </NavLink>
+            {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/>}
+            <div className={cl.nav} style={onStyle}>
+                <NavLink to='/'>home</NavLink>
+                <NavLink to='/services' >{t("page_name_s")}</NavLink>
+                {/*<NavLink to='/services'>Услуги</NavLink>*/}
+                <NavLink to='/works'>Портфолио</NavLink>
+                {/*<NavLink to='/' >Экспертиза</NavLink>*/}
+                <NavLink to='/about'>О нас</NavLink>
+                <NavLink to='/contacts'>Контакты</NavLink>
+                {window.innerWidth<500 &&
+                <LangList open={openLang} handleOpen={(v)=>setOpenLang(v)}/>
+                }
+            </div>
+            {window.innerWidth>500 &&
+            <LangList open={openLang} handleOpen={(v)=>setOpenLang(v)}/>
+            }
             <div className={cl.right}>
                 <FormControlLabel
                     // control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked checkedIcon={light}/>}
-                    control={<MaterialUISwitch sx={{ m: 1 }} theme />}
+                    control={<MaterialUISwitch sx={{m: 1}} theme/>}
                     label=" "
                     checked={theme}
                     onChange={onChangeMaterialUISwitch}
                 />
-                {window.innerWidth > 993 &&  <button className={cl.contactBtn}>Связаться с нами</button>}
+                {window.innerWidth > 993 && <button className={cl.contactBtn}>Связаться с нами</button>}
             </div>
         </div>
     );
 };
 
 export default Header;
+
+type propsLangListType = {
+    open: boolean
+    handleOpen: (v: boolean) => void
+}
+export const LangList = (props: propsLangListType) => {
+    const handleOpen = () => {
+        console.log('props.open',props.open);
+        props.handleOpen(!props.open)
+    }
+    const changeLang=(v:string)=>{
+        console.log('changeLang',v);
+        i18next.changeLanguage(v)
+    }
+    const currentLanguageCode = cookies.get('i18next') || 'en'
+    return (
+        <div style={{position:'relative',marginTop:8}}>
+            <LanguageIcon onClick={handleOpen}/>
+            <div style={{display:  props.open? 'block': 'none'}}
+            className={cl.lang}>
+                <p onClick={() => {changeLang("ru")}} >RU</p>
+                <p onClick={() => {changeLang("en")}} >EN</p>
+            </div>
+        </div>
+    )
+}
