@@ -14,7 +14,7 @@ import {useTranslation} from "react-i18next";
 import LanguageIcon from '@mui/icons-material/Language';
 import i18next from "i18next";
 import cookies from 'js-cookie'
-
+import i18n from './../../../i18n'
 const MaterialUISwitch = styled(Switch)(() => ({
     width: 62,
     height: 34,
@@ -90,6 +90,7 @@ const Header = ({theme, ...props}: propsType) => {
             {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/>}
             <div className={cl.nav} style={onStyle}>
                 <NavLink to='/'>home</NavLink>
+                {/*<NavLink to='/services' >{t("page-name-s")}</NavLink>*/}
                 <NavLink to='/services' >{t("page_name_s")}</NavLink>
                 {/*<NavLink to='/services'>Услуги</NavLink>*/}
                 <NavLink to='/works'>Портфолио</NavLink>
@@ -124,13 +125,15 @@ type propsLangListType = {
     handleOpen: (v: boolean) => void
 }
 export const LangList = (props: propsLangListType) => {
+    const {t, i18n } = useTranslation();
     const handleOpen = () => {
         console.log('props.open',props.open);
         props.handleOpen(!props.open)
     }
     const changeLang=(v:string)=>{
         console.log('changeLang',v);
-        i18next.changeLanguage(v)
+        // i18next.changeLanguage(v)
+        i18n.changeLanguage(v)
     }
     const currentLanguageCode = cookies.get('i18next') || 'en'
     return (
@@ -138,8 +141,10 @@ export const LangList = (props: propsLangListType) => {
             <LanguageIcon onClick={handleOpen}/>
             <div style={{display:  props.open? 'block': 'none'}}
             className={cl.lang}>
+                <div><h1>{t("menu.contacts")}</h1></div>
                 <p onClick={() => {changeLang("ru")}} >RU</p>
                 <p onClick={() => {changeLang("en")}} >EN</p>
+                <p onClick={() => {changeLang("en")}} >{t("title")}</p>
             </div>
         </div>
     )

@@ -1,0 +1,17 @@
+{
+  "title": "Internationalizing with i18next",
+  "page_name_s": "Services",
+  "menu": {
+    "services": "services",
+    "works": "works",
+    "about": "about",
+    "contacts": "contacts",
+    "btnText": "Связаться с нами"
+  },
+  "home": {
+    "helpsBlock": {
+      "helpsBlockTitle": "Our service",
+      "helpsBlockHeading": "our helps"
+    }
+  }
+}
