@@ -3,8 +3,9 @@ import imagePortfolio from './../../../assets/portfolio.jpg'
 import cl from "./portfolio.module.css";
 import LastCard from "../../common/cardsLast/lastCard";
 import {Link} from "react-router-dom";
-import {BottomBlock, lastCards} from "../home/home";
+import {lastCards} from "../home/home";
 import Offer from "../../common/offer/offer";
+import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
 
 type filterType =
     'Все категории'

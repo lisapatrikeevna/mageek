@@ -352,7 +352,7 @@ import person2 from './../../../assets/images/person2.png'
 import person3 from './../../../assets/images/person3.png'
 import avatar from './../../../assets/images/avatar.png'
 import ReviewsCarousel from "../../common/reviewsCarousel/reviewsCarousel";
-import {BottomBlock} from "../home/home";
+import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
 
 const advantagesArr = [
     {

@@ -3,12 +3,13 @@ import cl from './web.module.css'
 import style from './../common.module.css'
 import imgBg from "../../../assets/webBg.jpg";
 import Offer from "../../common/offer/offer";
-import {BottomBlock, LastWorksSection} from "../home/home";
 import {BlueContainer, DeckWithImgSection} from "../services/services";
 import img from './../../../assets/images/DeviceMacbookPro.png';
 import InfoListBlock from "../../common/infoListBlock/infoListBlock";
 import ReviewsCarousel from "../../common/reviewsCarousel/reviewsCarousel";
 import {reviewsArr} from "../about/about";
+import {LastWorksSection} from "../../common/LastWorksSection/LastWorksSection";
+import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
 
 
 const infoList = [

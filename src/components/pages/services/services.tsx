@@ -10,7 +10,8 @@ import arrowBtn from './../../../assets/arrowBl.png'
 import arrowForLink from './../../../assets/arrow.png'
 import {Link, useNavigate} from "react-router-dom";
 import webImg from './../../../assets/images/web.png'
-import {BottomBlock, LastWorksSection} from "../home/home";
+import {LastWorksSection} from "../../common/LastWorksSection/LastWorksSection";
+import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
 
 
 type propsType = {

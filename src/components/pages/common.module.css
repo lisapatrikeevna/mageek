@@ -2,3 +2,217 @@
     width: 90%;
     margin: 0 auto;
 }
+.lastWorks{
+    margin-top: 150px;
+    text-align: right;
+}
+.title{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #8370FF;
+    margin: 0 0 16px 0;
+}
+.textBlockLastW{
+    width: 592px;
+    text-align: center;
+    margin: 0 auto 70px;
+}
+.helpsBlock h2,.textBlockLastW h2,.clientBlock h2{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A;
+    margin-bottom: 30px;
+}
+h2.dark{
+    color: #fff;
+}
+h2.light{
+    color: #0E153A;
+}
+.cardWrap{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.worksLink {
+    margin-top: 38px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+}
+.worksLink span{
+    margin-left: 18px;
+    width: 52px;
+}
+.letsDiscuss{
+    background: #0E153A;
+    margin-top: 195px;
+}
+.letsDiscussDark{
+    background: linear-gradient(151.8deg, rgba(131, 112, 255, 0.55) -29.62%, #8370FF 82.55%);
+}
+.letsDiscuss h3,.letsDiscuss h5{
+    color: #FFFFFF!important;
+}
+.letsDiscuss .container{
+    display: flex;
+    color: #FFFFFF!important;
+}
+.leftBlockDiscuss{
+    width: 45%;
+    text-align: left;
+    margin-top: 147px;
+    margin-bottom: 148px;
+}
+.leftBlockDiscuss h5{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin: 0;
+}
+.leftBlockDiscuss h3{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    width: 520px;
+    margin-top: 16px;
+    margin-bottom: 0;
+}
+.leftBlockDiscussDesk{
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 165.5%;
+    margin-bottom: 10px;
+}
+.leftBlockDiscussLinkT{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 160%;
+}
+.leftBlockLinkBtn{
+    margin: 40px 0;
+    width: 230px;
+    height: 53px;
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+}
+.leftBlockLinkBtnLight{
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    color: #FFFFFF;
+}
+.leftBlockLinkBtnDark{
+    background: #FFFFFF;
+    color: #0E153A;
+}
+.rightBlockDiscuss{
+    width: 55%;
+    text-align: left;
+    position: relative;
+}
+.rightBlockDiscussText{
+    width: 527px;
+    margin-top: 129px;
+    margin-bottom: 145px;
+}
+.rightBlockDiscuss h3{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin-bottom: 9px;
+}
+.rightBlockDiscussText{
+    margin-left: auto;
+}
+.mIconWrap{
+    position: absolute;
+    /*width: 679px;*/
+    width: 72%;
+    top: 52px;
+    bottom: 76px;
+}
+.mIconWrap img{
+    width: 100%;
+}
+
+
+@media screen and (max-width: 1222px){
+    .leftBlockDiscuss h3,.rightBlockDiscussText{
+        width: 62%;
+    }
+    .letsDiscuss{
+        margin-top: 100px;
+    }
+}
+@media screen and (max-width: 993px){
+    .letsDiscuss .container{
+        flex-direction: column;
+    }
+    .leftBlockDiscuss,.rightBlockDiscussText,.rightBlockDiscuss{
+        width: 100%;
+    }
+    .leftBlockDiscuss{
+        margin-bottom: 0;
+    }
+    .rightBlockDiscussText{
+        margin-bottom: 200px;
+        margin-top: 215px;
+    }
+    .textBlockLastW{
+        width: 95%;
+        margin: 70px auto 40px;
+    }
+    .helpsBlock,.lastWorks{
+        margin-top: 100px;
+    }
+    .helpsBlock h2,.clientBlock h2{
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+@media screen and (max-width: 768px){
+    .rightBlockDiscussText{
+        margin-top: 100px;
+    }
+    .clientImg{
+        width: 48%;
+    }
+}
+@media screen and (max-width: 578px){
+    .leftBlockDiscuss h3{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .rightBlockDiscussText{
+        margin-bottom: 90px;
+    }
+    .helpsBlock,.lastWorks{
+        margin-top: 60px;
+    }
+    .textBlockLastW h2{
+        font-size: 23px;
+        line-height: 25px;
+    }
+    .title{
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .helpsBlock h2{
+        font-size: 28px;
+        line-height: 30px;
+    }
+}

@@ -37,12 +37,14 @@
 //     } );
 // export default i18n;
 //
-//
-// // https://proglib.io/p/internacionalizaciya-prilozheniy-react-s-i18next-2020-10-12
 
+// // https://proglib.io/p/internacionalizaciya-prilozheniy-react-s-i18next-2020-10-12
+//https://stackblitz.com/edit/react-ybzhyk?file=src%2Fi18n.js
+// https://www.robinwieruch.de/react-internationalization/
 
 import i18n from 'i18next'
 import Backend from 'i18next-http-backend'
+// import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
 // import rr from './../public/locales/en/translation.json'
@@ -56,7 +58,9 @@ i18n
     .use (initReactI18next)
     .init({
         // Стандартный язык
+        lng: 'ru',
         fallbackLng: 'ru',
+        whitelist: ['ru', 'en'],
         debug: true,
         // Распознавание и кэширование языковых кук
         detection: {
@@ -65,15 +69,18 @@ i18n
             cache: ['cookie']
         },
         interpolation: {
-            escapeValue: false
+            escapeValue: false,
         },
         backend: {
             // for all available options read the backend's repository readme file
-            loadPath: './../public/locales/{{lng}}/{{ns}}.json'
+            loadPath: '/locales/{{lng}}/translation.json'
+            // loadPath: `/locales/{{lng}}/translation.json`
+            // loadPath: 'locales/{{lng}}/{{ns}}.json'
         },
-        react: {
-            wait: true,
-        }
+        // react: {
+        //     wait: true,
+        // }
+        // react: { useSuspense: true }
     })
 
 export default i18n;

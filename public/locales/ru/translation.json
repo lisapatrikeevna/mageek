@@ -1,17 +1,19 @@
 {
-  "title": "Интернационализация с i18next",
-  "page_name_s": "Услуги",
-  "menu": {
-    "services": "Услуги",
-    "works": "Портфолио",
-    "about": "О нас",
-    "contacts": "Контакты",
-    "btnText": "Связаться с нами"
-  },
-  "home": {
-    "helpsBlock": {
-      "helpsBlockTitle": "Наши услуги",
-      "helpsBlockHeading": "КАК мы можем вам помочь"
+  "ru": {
+    "title": "Интернационализация с i18next",
+    "page_name_s": "Услуги",
+    "menu": {
+      "services": "Услуги",
+      "works": "Портфолио",
+      "about": "О нас",
+      "contacts": "Контакты",
+      "btnText": "Связаться с нами"
+    },
+    "home": {
+      "helpsBlock": {
+        "helpsBlockTitle": "Наши услуги",
+        "helpsBlockHeading": "КАК мы можем вам помочь"
+      }
     }
   }
 }

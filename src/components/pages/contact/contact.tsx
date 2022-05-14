@@ -4,7 +4,7 @@ import style from './../common.module.css'
 import imgBg from "../../../assets/contactBg.jpg";
 import map from "../../../assets/images/geo.jpg";
 import Offer from "../../common/offer/offer";
-import {BottomBlock} from "../home/home";
+import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
 
 
 type propsType={

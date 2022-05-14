@@ -125,7 +125,7 @@ type propsLangListType = {
     handleOpen: (v: boolean) => void
 }
 export const LangList = (props: propsLangListType) => {
-    const {t, i18n } = useTranslation();
+    const {t, i18n } = useTranslation(['translation']);
     const handleOpen = () => {
         console.log('props.open',props.open);
         props.handleOpen(!props.open)

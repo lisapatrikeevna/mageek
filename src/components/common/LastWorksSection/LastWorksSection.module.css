@@ -1,0 +1,79 @@
+/*.lastWorks{*/
+/*    margin-top: 150px;*/
+/*    text-align: right;*/
+/*}*/
+/*.lastWorks{*/
+/*    margin-top: 100px;*/
+/*}*/
+/*.textBlockLastW{*/
+/*    width: 592px;*/
+/*    text-align: center;*/
+/*    margin: 0 auto 70px;*/
+/*}*/
+/*.textBlockLastW{*/
+/*    width: 95%;*/
+/*    margin: 70px auto 40px;*/
+/*}*/
+/*.textBlockLastW h2{*/
+/*    font-weight: 700;*/
+/*    font-size: 40px;*/
+/*    line-height: 48px;*/
+/*    text-transform: uppercase;*/
+/*    color: #0E153A;*/
+/*    margin-bottom: 30px;*/
+/*}*/
+/*.title{*/
+/*    font-weight: 600;*/
+/*    font-size: 16px;*/
+/*    line-height: 19px;*/
+/*    text-transform: uppercase;*/
+/*    color: #8370FF;*/
+/*    margin: 0 0 16px 0;*/
+/*}*/
+/*.helpCardsWrap{*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    justify-content: space-between;*/
+/*    margin: 70px -10px 0 -10px;*/
+/*}*/
+/*.cardWrap{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    flex-wrap: wrap;*/
+/*}*/
+/*h2.dark{*/
+/*    color: #fff;*/
+/*}*/
+/*h2.light{*/
+/*    color: #0E153A;*/
+/*}*/
+/*.worksLink {*/
+/*    margin-top: 38px;*/
+/*    font-weight: 500;*/
+/*    font-size: 16px;*/
+/*    line-height: 19px;*/
+/*    text-transform: uppercase;*/
+/*    background: -webkit-linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);*/
+/*    -webkit-background-clip: text;*/
+/*    -webkit-text-fill-color: transparent;*/
+/*    display: block;*/
+/*}*/
+/*.worksLink span{*/
+/*    margin-left: 18px;*/
+/*    width: 52px;*/
+/*}*/
+
+
+@media screen and (max-width: 578px) {
+    .lastWorks {
+        margin-top: 60px;
+    }
+    .textBlockLastW h2{
+        font-size: 23px;
+        line-height: 25px;
+    }
+    .title{
+        font-size: 14px;
+        line-height: 15px;
+    }
+}
