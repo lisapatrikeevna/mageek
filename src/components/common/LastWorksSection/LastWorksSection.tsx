@@ -1,10 +1,9 @@
-// import cl from "./LastWorksSection.module.css";
 import LastCard from "../cardsLast/lastCard";
 import {Link} from "react-router-dom";
 import arrowBl from "../../../assets/arrowBl.png";
 import React from "react";
-import {lastCards} from "../../pages/home/home";
 import cl from './../../pages/common.module.css'
+import {lastCards} from "../../pages/home/home";
 
 
 type propsType={

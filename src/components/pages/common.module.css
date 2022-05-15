@@ -19,7 +19,7 @@
     text-align: center;
     margin: 0 auto 70px;
 }
-.helpsBlock h2,.textBlockLastW h2,.clientBlock h2{
+.textBlockLastW h2{
     font-weight: 700;
     font-size: 40px;
     line-height: 48px;
@@ -179,10 +179,10 @@ h2.light{
     .helpsBlock,.lastWorks{
         margin-top: 100px;
     }
-    .helpsBlock h2,.clientBlock h2{
-        font-size: 30px;
-        line-height: 32px;
-    }
+    /*.helpsBlock h2,.clientBlock h2{*/
+    /*    font-size: 30px;*/
+    /*    line-height: 32px;*/
+    /*}*/
 }
 @media screen and (max-width: 768px){
     .rightBlockDiscussText{

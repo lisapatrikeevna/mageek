@@ -5,14 +5,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-// import i18n from "i18next";
-// import {I18nextProvider, initReactI18next} from "react-i18next";
-// import LanguageDetector from 'i18next-browser-languagedetector';
-// import HttpApi from 'i18next-http-backend';
-// import Backend from "i18next-xhr-backend";
-// import Backend from "i18next-http-backend";
 import './i18n';
-// import i18n from './i18n'
 
 
 // i18n

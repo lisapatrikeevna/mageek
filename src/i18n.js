@@ -73,9 +73,9 @@ i18n
         },
         backend: {
             // for all available options read the backend's repository readme file
-            loadPath: '/locales/{{lng}}/translation.json'
+            // loadPath: '/locales/{{lng}}/translation.json'
             // loadPath: `/locales/{{lng}}/translation.json`
-            // loadPath: 'locales/{{lng}}/{{ns}}.json'
+            loadPath: '/static/locales/{{lng}}/{{ns}}.json'
         },
         // react: {
         //     wait: true,

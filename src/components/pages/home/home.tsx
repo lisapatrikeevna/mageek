@@ -173,7 +173,7 @@ const Home = ({theme,...props}:propsType) => {
             <div className={style.container}>
                 <CarouselComponent banner={listBanners}/>
                 <div className={cl.helpsBlock}>
-                    <p className={cl.title}>Наши услуги</p>
+                    <p className={style.title}>Наши услуги</p>
                     <h2 className={`${theme? style.dark: style.light}`}>КАК мы можем вам помочь</h2>
                     <div className={cl.helpCardsWrap}>
                         {helpCards.map(i => {
