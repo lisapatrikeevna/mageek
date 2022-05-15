@@ -14,7 +14,6 @@ import {useTranslation} from "react-i18next";
 import LanguageIcon from '@mui/icons-material/Language';
 import i18next from "i18next";
 import cookies from 'js-cookie'
-import i18n from './../../../i18n'
 const MaterialUISwitch = styled(Switch)(() => ({
     width: 62,
     height: 34,
@@ -90,7 +89,6 @@ const Header = ({theme, ...props}: propsType) => {
             {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/>}
             <div className={cl.nav} style={onStyle}>
                 <NavLink to='/'>home</NavLink>
-                {/*<NavLink to='/services' >{t("page-name-s")}</NavLink>*/}
                 <NavLink to='/services' >{t("page_name_s")}</NavLink>
                 {/*<NavLink to='/services'>Услуги</NavLink>*/}
                 <NavLink to='/works'>Портфолио</NavLink>

@@ -47,7 +47,6 @@ import Backend from 'i18next-http-backend'
 // import Backend from 'i18next-xhr-backend';
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { initReactI18next } from 'react-i18next'
-// import rr from './../public/locales/en/translation.json'
 
 i18n
     // Подключение бэкенда i18next
@@ -73,7 +72,6 @@ i18n
         },
         backend: {
             // for all available options read the backend's repository readme file
-            // loadPath: '/locales/{{lng}}/translation.json'
             // loadPath: `/locales/{{lng}}/translation.json`
             loadPath: '/static/locales/{{lng}}/{{ns}}.json'
         },

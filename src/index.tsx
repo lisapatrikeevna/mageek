@@ -8,38 +8,6 @@ import {BrowserRouter} from "react-router-dom";
 import './i18n';
 
 
-// i18n
-//     .use(initReactI18next) // passes i18n down to react-i18next
-//     .use(LanguageDetector)
-//     .use(HttpApi)
-//     .init({
-//         debug: true,
-//         // supportedLngs: ['en','ru','fr','de','ua'],
-//         supportedLngs: ['en', 'ru'],
-//         fallbackLng: "en",
-//         detection: {
-//             // order: ['cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
-//             order: ['cookie'],
-//             caches: ['cookie']
-//         },
-//         backend: {
-//             // loadPath: '/assets/locales/{{lng}}/translation.json',
-//             loadPath: '/locales/{{lng}}/translation.json',
-//         },
-//     });
-
-// i18n
-//     // .use(Backend)
-//     .use(HttpApi)
-//     .use(initReactI18next)
-//     .init({
-//         lng: ['en', 'ru'],
-//         fallbackLng: "en",
-//         debug: true,
-//         interpolation: {
-//             escapeValue: false
-//         }
-//     });
 const Loader = () => <div>loading...</div>;
 
 ReactDOM.render(
