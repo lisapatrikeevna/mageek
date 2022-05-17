@@ -52,7 +52,9 @@
     align-items: center;
     text-decoration: none;
 }
-
+.worksMore:hover,.worksMore:active{
+    color: #FFFFFF;
+}
 @media screen and (max-width: 1222px) {
     .filteredBlock {
         width: 90%;

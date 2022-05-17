@@ -1,4 +1,4 @@
-import cl from "../../pages/services/services.module.css";
+import cl from "./DeckWithImgSection.module.css";
 import React from "react";
 
 type propsTypeDeskWithImgSection = {

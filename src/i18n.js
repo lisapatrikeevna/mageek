@@ -1,12 +1,3 @@
-// import i18n from "i18next";
-// import Backend from "i18next-http-backend";
-// import LanguageDetector from "i18next-browser-languagedetector";
-// import {initReactI18next} from "react-i18next";
-//
-//
-// const languages = ['en', 'ru'];
-//
-//
 // i18n
 //     // .use(HttpApi)
 //     .use(Backend)
@@ -19,9 +10,7 @@
 //         debug: true,
 //         whitelist: languages,
 //         detection: {
-//             // order: ['cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
-//             order: ['cookie'],
-//             caches: ['cookie']
+//             order: ['cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
 //         },
 //         interpolation: {
 //             escapeValue: false, // not needed for react as it escapes by default

@@ -3,7 +3,6 @@ import cl from './about.module.css'
 import style from './../common.module.css'
 import imgBg from "../../../assets/aboutBg.jpg";
 import Offer from "../../common/offer/offer";
-import {DeckWithImgSection} from "../services/services";
 import img from './../../../assets/images/videoExampleImg.png'
 import aboutLast from './../../../assets/images/aboutLast.png'
 import arrowBl from './../../../assets/arrowBl.png'
@@ -14,6 +13,7 @@ import person3 from './../../../assets/images/person3.png'
 import avatar from './../../../assets/images/avatar.png'
 import ReviewsCarousel from "../../common/reviewsCarousel/reviewsCarousel";
 import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
+import {DeckWithImgSection} from "../../common/DeckWithImgSection/DeckWithImgSection";
 
 const advantagesArr = [
     {

@@ -2,10 +2,80 @@
     display: flex;
     margin-top: 120px;
 }
+.textBlock {
+    width: 50%;
+    text-align: left;
+    margin-right: 7%;
+}
 
+.titleMain {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #0E153A;
+    margin: 16px 0 30px;
+}
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #8370FF;
+}
+.textAfter {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 168.52%;
+    color: #0E153A;
+    margin-top: 30px;
+    margin-bottom: 23px;
+}
+.titleMainDark,.textAfterDark{
+    color: #FFFFFF;
+}
+.imageList {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+.imageBlock {
+    width: 50%;
+}
+
+.imageBlock img {
+    width: 100%;
+}
 
 
 
 @media screen and (max-width: 993px) {
+    .ourServices {
+        flex-direction: column;
+    }
+    .textBlock, .imageBlock {
+        width: 100%;
+    }
+      .imageBlock {
+        margin-top: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
 
+    .titleMain {
+        font-size: 30px;
+        line-height: 32px;
+    }
+}
+@media screen and (max-width: 576px) {
+
+    .titleMain {
+        font-size: 21px;
+        line-height: 25px;
+        margin: 8px 0 20px;
+    }
+
+    .title {
+        font-size: 14px;
+    }
 }

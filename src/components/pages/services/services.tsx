@@ -12,6 +12,8 @@ import {Link, useNavigate} from "react-router-dom";
 import webImg from './../../../assets/images/web.png'
 import {LastWorksSection} from "../../common/LastWorksSection/LastWorksSection";
 import {BottomBlock} from "../../common/BottomBlock/BottomBlock";
+import {DeckWithImgSection} from "../../common/DeckWithImgSection/DeckWithImgSection";
+import {BlueContainer} from "../../common/BlueContainer/BlueContainer";
 
 
 type propsType = {
@@ -83,39 +85,6 @@ const Services = ({theme, ...props}: propsType) => {
 
 export default Services;
 
-type propsTypeDeskWithImgSection = {
-    title: string
-    titleMain: string
-    desk: string
-    img: any
-    textAfter?: string
-    iconF?: any
-    iconS?: any
-    iconT?: any
-    theme?: boolean
-}
-export const DeckWithImgSection = ({title, titleMain, desk, img, ...props}: propsTypeDeskWithImgSection) => {
-    return (
-        <div className={cl.ourServices}>
-            <div className={cl.textBlock}>
-                <p className={cl.title}>{title}</p>
-                <h2 className={`${cl.titleMain}  ${props.theme && cl.titleMainDark}`}>{titleMain}</h2>
-                <p className={cl.desk}>{desk}</p>
-                {props.textAfter &&
-                <p className={`${cl.textAfter}  ${props.theme && cl.textAfterDark}`}>{props.textAfter}</p>}
-                <div className={cl.imageList}>
-                    {props.iconF && <img src={props.iconF} alt="htmlImj"/>}
-                    {props.iconS && <img src={props.iconS} alt="htmlImj"/>}
-                    {props.iconT && <img src={props.iconT} alt="htmlImj"/>}
-                </div>
-            </div>
-            <div className={cl.imageBlock}>
-                <img src={img} alt="webImg"/>
-            </div>
-        </div>
-    )
-}
-
 const WebAccordionBlock = () => {
     const navigate = useNavigate();
     return (
@@ -166,25 +135,25 @@ const WebAccordionBlock = () => {
     )
 }
 
-type blueBlockPropsType = {
-    prevText: string
-    title: string
-}
-export const BlueContainer = ({prevText, title}: blueBlockPropsType) => {
-
-    return (
-        <div className={cl.blueBlock}>
-            <div className={cl.blueDeck}>
-                <h6>{prevText}</h6>
-                <h4>{title}</h4>
-            </div>
-            <div className={cl.arrowForLink}><img src={arrowForLink} alt="arrowForLink"/></div>
-            <div className={cl.linkBtnWrap}>
-                <button className={cl.linkBtn}>
-                    <span>Обсудить проект</span>
-                </button>
-                <p className={cl.textAfterBtn}>Мы моментально ответим вам</p>
-            </div>
-        </div>
-    )
-}
+// type blueBlockPropsType = {
+//     prevText: string
+//     title: string
+// }
+// export const BlueContainer = ({prevText, title}: blueBlockPropsType) => {
+//
+//     return (
+//         <div className={cl.blueBlock}>
+//             <div className={cl.blueDeck}>
+//                 <h6>{prevText}</h6>
+//                 <h4>{title}</h4>
+//             </div>
+//             <div className={cl.arrowForLink}><img src={arrowForLink} alt="arrowForLink"/></div>
+//             <div className={cl.linkBtnWrap}>
+//                 <button className={cl.linkBtn}>
+//                     <span>Обсудить проект</span>
+//                 </button>
+//                 <p className={cl.textAfterBtn}>Мы моментально ответим вам</p>
+//             </div>
+//         </div>
+//     )
+// }

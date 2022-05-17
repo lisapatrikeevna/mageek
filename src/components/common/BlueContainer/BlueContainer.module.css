@@ -1,0 +1,90 @@
+.blueBlock {
+    /*height: 399px;*/
+    background: linear-gradient(102.99deg, #61C2F8 -23.87%, #9281FF 133.24%);
+    box-shadow: 0 17px 59px rgba(0, 116, 225, 0.31);
+    border-radius: 30px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3% 6%;
+    margin-top: 150px;
+}
+.blueDeck {
+    text-align: left;
+    width: 60%;
+}
+
+.blueDeck h6 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    margin: 60px 0 0;
+    color: #FFFFFF !important;
+}
+
+.blueDeck h4 {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 136.02%;
+    margin: 20px 0 50px;
+    letter-spacing: -0.02em;
+    color: #FFFFFF !important;
+}
+
+
+
+.linkBtn {
+    width: 250px;
+    height: 60px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: none;
+}
+
+.linkBtn span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    background: linear-gradient(139.87deg, #61CEF8 7.04%, #A53EF6 113.2%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+.arrowForLink {
+    margin-top: -38px;
+}
+
+@media screen and (max-width: 993px) {
+    .blueBlock {
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .blueDeck {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .blueBlock{
+        margin: 50px 0 !important;
+    }
+    .blueDeck h4 {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .blueDeck h6 ,.linkBtn span{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .linkBtn{
+        width: 200px;
+        height: 40px;
+        margin: 15px 0;
+    }
+}

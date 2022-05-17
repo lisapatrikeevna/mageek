@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import Header from "./components/common/header/header";
 import {Route, Routes} from "react-router-dom";
@@ -9,11 +9,18 @@ import Portfolio from "./components/pages/portfolio/portfolio";
 import Contact from "./components/pages/contact/contact";
 import About from "./components/pages/about/about";
 import Web from "./components/pages/web/web";
+import Cookies from 'js-cookie';
 
 function App() {
     const [lightTheme,setLightTheme]=useState(true)
+    useEffect(()=>{
+       let theme = Cookies.get('theme')
+        // @ts-ignore
+        setLightTheme(++theme)
+    },[])
     const onChangeMaterialUISwitch=(value:boolean)=>{
         setLightTheme(value)
+        Cookies.set('theme',value.toString())
     }
 
   return (
