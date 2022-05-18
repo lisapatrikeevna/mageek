@@ -14,7 +14,7 @@ type propsType={
 const Contact = ({theme}:propsType) => {
     return (
         <>
-            <div className={style.container}>
+            <div className={`${style.container} ${theme && cl.darkTheme}`}>
                 <Offer img={imgBg} title={'Контакты'}
                        text={'Если есть что-то, о чем вы хотите поговорить, пожалуйста, не стесняйтесь связаться с нами.'}
                        linkPath={'/jjj'}/>

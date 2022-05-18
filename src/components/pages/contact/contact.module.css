@@ -103,7 +103,8 @@
     font-size: 40px;
     line-height: 48px;
     text-transform: uppercase;
-    color: #0E153A !important;
+    color: #0E153A;
+    /*color: #0E153A !important;*/
     margin-bottom: 80px;
     margin-top: 12px;
 }
@@ -118,6 +119,12 @@
 
 .infoWrap {
     text-align: left;
+}
+.darkTheme .textBlock h2, .darkTheme .desc,
+.darkTheme .titleWrap h3,.darkTheme .info h4,
+.darkTheme .phones a,.darkTheme .mails a,
+.darkTheme .adres p,.darkTheme .ask a{
+    color:#F8F8F8;
 }
 
 @media screen and (max-width: 1222px) {

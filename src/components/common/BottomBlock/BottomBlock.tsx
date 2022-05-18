@@ -8,7 +8,7 @@ type propsType={
 
 export const BottomBlock = ({theme}:propsType) => {
     return (
-        <div className={`${cl.letsDiscuss} theme && ${cl.letsDiscussDark}`}>
+        <div className={`${cl.letsDiscuss}  ${theme && cl.letsDiscussDark}`}>
             <div className={cl.container}>
                 <div className={cl.leftBlockDiscuss}>
                     <h5>ПЕРЕСТАНЬТЕ ЗАКАЗЫВАТЬ ПРОСТО САЙТЫ</h5>
