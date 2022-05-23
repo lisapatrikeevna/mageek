@@ -78,7 +78,7 @@ const Header = ({theme, ...props}: propsType) => {
     }
 
     //Translation
-    const {t} = useTranslation();
+    const {t,i18n} = useTranslation();
 
     return (
         <div className={`${cl.headerWrap} ${!theme ? '' : cl.headerWrapDark}`}
@@ -86,15 +86,17 @@ const Header = ({theme, ...props}: propsType) => {
             <NavLink to='/' className={cl.logo}>
                 <img src={!theme ? logo : logoDark} alt="logo"/>
             </NavLink>
+            {/*<div>*/}
+            {/*    Current Language: {i18n.language}*/}
+            {/*</div>*/}
             {window.innerWidth < 993 && <MenuIcon className={cl.menuBtn} onClick={onClickHandler}/>}
             <div className={cl.nav} style={onStyle}>
                 <NavLink to='/'>home</NavLink>
-                <NavLink to='/services' >{t("page_name_s")}</NavLink>
-                {/*<NavLink to='/services'>Услуги</NavLink>*/}
-                <NavLink to='/works'>Портфолио</NavLink>
+                <NavLink to='/services' >{t("services")}</NavLink>
+                <NavLink to='/works'>{t("works")}</NavLink>
                 {/*<NavLink to='/' >Экспертиза</NavLink>*/}
-                <NavLink to='/about'>О нас</NavLink>
-                <NavLink to='/contacts'>Контакты</NavLink>
+                <NavLink to='/about'>{t("about")}</NavLink>
+                <NavLink to='/contacts'>{t("contacts")}</NavLink>
                 {window.innerWidth<500 &&
                 <LangList open={openLang} handleOpen={(v)=>setOpenLang(v)}/>
                 }
@@ -139,10 +141,8 @@ export const LangList = (props: propsLangListType) => {
             <LanguageIcon onClick={handleOpen}/>
             <div style={{display:  props.open? 'block': 'none'}}
             className={cl.lang}>
-                <div><h1>{t("menu.contacts")}</h1></div>
                 <p onClick={() => {changeLang("ru")}} >RU</p>
                 <p onClick={() => {changeLang("en")}} >EN</p>
-                <p onClick={() => {changeLang("en")}} >{t("title")}</p>
             </div>
         </div>
     )

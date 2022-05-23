@@ -27,9 +27,12 @@
 // export default i18n;
 //
 
+
+//https://stackoverflow.com/questions/67405852/react-i18next-throws-translator-missingkey-en-translation-and-usetranslation-h
 // // https://proglib.io/p/internacionalizaciya-prilozheniy-react-s-i18next-2020-10-12
 //https://stackblitz.com/edit/react-ybzhyk?file=src%2Fi18n.js
 // https://www.robinwieruch.de/react-internationalization/
+//https://stackblitz.com/edit/react-ybzhyk?file=src%2Fi18n.js
 
 import i18n from 'i18next'
 import Backend from 'i18next-http-backend'
@@ -46,9 +49,13 @@ i18n
     .use (initReactI18next)
     .init({
         // Стандартный язык
-        lng: 'ru',
-        fallbackLng: 'ru',
-        whitelist: ['ru', 'en'],
+        // lng: 'ru',
+        // fallbackLng: 'ru',
+        fallbackLng: {
+            // ['ru', 'en'],
+            default:["ru"]
+        },
+        // whitelist: ['ru', 'en'],
         debug: true,
         // Распознавание и кэширование языковых кук
         detection: {
@@ -62,7 +69,8 @@ i18n
         backend: {
             // for all available options read the backend's repository readme file
             // loadPath: `/locales/{{lng}}/translation.json`
-            loadPath: '/static/locales/{{lng}}/{{ns}}.json'
+            // loadPath: '/static/locales/{{lng}}/{{ns}}.json'
+            loadPath: '/mageek/static/{{lng}}/{{ns}}.json'
         },
         // react: {
         //     wait: true,

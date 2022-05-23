@@ -34,7 +34,7 @@ function App() {
             <Route path='/about' element={<About theme={lightTheme}/>}/>
             <Route path='/web' element={<Web theme={lightTheme}/>}/>
         </Routes>
-        <Footer theme={lightTheme}/>
+        {/*<Footer theme={lightTheme}/>*/}
     </div>
   );
 }

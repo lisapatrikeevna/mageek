@@ -15,7 +15,8 @@
     position: absolute;
     top: 30px;
     z-index: 99;
-    left: -13px;
+    /*left: -13px;*/
+    right: -13px;
     background: #7d9dfc;
     padding: 15px;
     font-weight: bold;

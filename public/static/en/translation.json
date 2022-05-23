@@ -6,12 +6,17 @@
     "works": "works",
     "about": "about",
     "contacts": "contacts",
-    "btnText": "Связаться с нами"
+    "btnText": "Contact us"
   },
   "home": {
     "helpsBlock": {
       "helpsBlockTitle": "Our service",
       "helpsBlockHeading": "our helps"
     }
+  },
+  "mainBanner": {
+    "title": "Development of IT and Digital solutions with a guarantee!",
+    "desk": "We build IT ecosystems and help transform B2B, B2C, D2C sales",
+    "btnText": "discuss the project"
   }
 }
